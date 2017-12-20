@@ -47,9 +47,15 @@ function clear(){
 
 //click fuction
 $("#zipcodeSearch").on("click", function(event){
+	event.preventDefault();
 	var zipcode = $("#zipcodeInput").val().trim();
 	clear();
 	console.log(zipcode);
 	displayWeatherInfo(zipcode);
 	return false;
+});
+$("#zipcodeInput").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#zipcodeSearch").click();
+    }
 });
