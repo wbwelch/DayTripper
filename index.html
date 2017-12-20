@@ -11,34 +11,19 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <h1><a class="navbar-brand" href="#">Day Tripper</a></h1>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active">
-          <li><a href="index.html">Main Page</a></li>
-          <li><a href="stayin.html"> Stay In </a></li>
-          <li><a href="goout.html"> Go Out </a></li>
-		  <li><a href="map.html" target="_blank"> Where Am I? </a></li>
-
-        </ul>
-      </div>
-    </div>
-</nav>
-<div class="container">
+<div class="container main-box">
+	
+<img id="logo" src="assets/images/logo.png" alt="Day Tripper Logo">
+<p><span id="slogan">Let us help you plan your night out...<em>or in.</em></span></p>
 <div class="container">
   	<div class="row">
   		<div class="col-sm-12">
     </div>
 </div>
-<div class="container">
+<div class="container" >
       <div class="col-sm-12">
           <div class="panel panel-default">
-			  <div class="panel-heading">
+			  <div class="panel-heading" id="home-header-box">
 				  <h3>What's the weather like?</h3>
 			  		<p>Enter your zip code and we'll tell you!</p>
 			  </div>
@@ -61,14 +46,14 @@
           </div>
       </div>
 </div>
-	<div class="panel-body" id="weather"></div>
+<div class="panel-body" id="weather"></div>
 
 <div class="container">
       <div class="col-sm-12">
-          <div class="panel panel-default">
+          <div class="panel panel-defult">
             <div class="panel-body" id="button-box">
-              <button class="btn btn-floating btn-large cyan pulse" id="stayin"><a href="stayin.html"><span class="inoutbuttons">STAY IN</span></a></button>
-              <button class="btn btn-floating btn-large cyan pulse" id="goout"><a href="goout.html"><span class="inoutbuttons">GO OUT</span></a></button>
+              <button id="stayin"><a href="stayin.html"><span class="inoutbuttons"><p>STAY IN</p></span></a></button>
+				<button id="goout"><a href="goout.html"><span class="inoutbuttons"><p>GO OUT</p></span></a></button>
             </div>
           </div>
     </div>

@@ -14,7 +14,7 @@ function displayWeatherInfo(zipcode) {
 //storing the forecast data
    		 var hour = response.hourly_forecast[i].FCTTIME.civil;
 		var hourDiv = $("<div class='hourDiv'>");
-   		 var pOne = $("<p>").text("Time: " + hour);
+   		 var pOne = $("<p>").text(hour);
   			hourDiv.append(pOne);
 			
 		 var image = response.hourly_forecast[i].icon_url;
@@ -22,11 +22,11 @@ function displayWeatherInfo(zipcode) {
   			hourDiv.append(pFour);
 
  		 var temperature = response.hourly_forecast[i].temp.english;
-   		 var pTwo = $("<p>").text("Temperature: " + temperature);
+   		 var pTwo = $("<p>").text(temperature + "\xB0" + "F");
   			hourDiv.append(pTwo);
 
 		 var condition = response.hourly_forecast[i].condition;
-   		 var pThree = $("<p>").text("Conditions: " + condition);
+   		 var pThree = $("<p>").text(condition);
   			hourDiv.append(pThree);
 		zipDiv.append(hourDiv);
 		

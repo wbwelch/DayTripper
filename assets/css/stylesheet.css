@@ -44,17 +44,49 @@ h3 {
 }
 p {
 	color: #4c1a52;
+	font: 400 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	padding: 10px;
+
+}
+em {
+	font-style: italic;
 }
 /* 
 ========================================
   Grid/Style
 ========================================
 */
+
 .container {
-	background-color: #f5926f;
+	background-color: none;
 	top: 20px;
 	margin: 40px auto;
 	height: auto;
+	padding: 10px;
+	text-align: center;
+}
+#logo {
+	width: 240px;
+	height: auto;
+	position: relative;
+	display: inline-block;
+	margin: 30px auto;
+}
+.main-box {
+	background-color: #79a9be;
+	background-color: rgba(121,169,190, .7);
+	top: 20px;
+	margin: 40px auto;
+	height: auto;
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+}
+#weather {
+	margin: 10px auto;
+	padding: 10px;
+	white-space:nowrap;
+  	overflow:auto;
 }
 #button-box {
 	position: absolute;
@@ -62,18 +94,33 @@ p {
 	padding: 30px;
 }
 #stayin {
+	padding: 15px;
 	display: inline-block;
 	margin: 10px auto;
 }
 #goout {
+	padding: 15px;
 	display: inline-block;
 	margin: 10px auto;
 }
 .hourDiv {
 	border: solid;
-	border-width: thin;
+	border-width: medium;
+	border-radius: 25px;
+	padding: 10px;
+	margin: 10px 5px;
 	border-color: #4c1a52;
 	display: inline-block;
 	width: auto;
+	background-color: #E9E6E6;
+	background-color: rgba(233,230,230,.7);
 }
+#home-header-box {
+	text-align: center;
+}
+#slogan {
+	font-weight: 700;
+	font-size: 20px;
+}
+
 
