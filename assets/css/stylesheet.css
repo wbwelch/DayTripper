@@ -17,6 +17,7 @@ body {
 	position: absolute;
 	height: auto;
 	color: white;
+	background-attachment: fixed;
 }
 /* 
 ========================================
@@ -24,10 +25,8 @@ body {
 ========================================
 */
 h1 {
-	color: #F6EEF0;
-	font-weight: 700;
-	font-size: 36px/40px;
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: #4c1a52;
+	font: 700 36px/40px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
 h2 {
 	color: #4c1a52;
@@ -51,25 +50,51 @@ p {
 em {
 	font-style: italic;
 }
+
+nav {
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	-webkit-box-shadow: 0 0 0;
+	-moz-box-shadow: 0 0 0;
+	box-shadow: 0 0 0;
+}
+.nav-link {
+	background-color: #D4CFCF;
+	background-color: rgba(212,207,207,.4);
+	font: 400 18px/22px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	border-radius: 15px;
+}
 /* 
 ========================================
   Grid/Style
 ========================================
 */
+hr.spacer {
+	padding: 10px;
+	margin: 20px;
+	border: none;
+}
 #weather-header {
 	text-align: center;
 	position: absolute;
 	
 }
+.navbar {
+	background: none;
+	border: none;
+}
 .container {
-	background-color: none;
+	background: none;
 	top: 20px;
 	margin: 40px auto;
 	height: auto;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
 }
-#logo {
+.logoMain {
 	width: 240px;
 	height: auto;
 	position: relative;
@@ -85,6 +110,7 @@ em {
 	padding: 10px;
 	border: none;
 	border-radius: 25px;
+	text-align: center;
 }
 #weather {
 	margin: 10px auto;
@@ -131,5 +157,28 @@ em {
 #spacer {
 	border: none;
 	
+}
+li {
+	display: inline-block;
+}
+a {
+	padding: 10px;
+	margin: 10px auto;
+}
+.nav-link {
+	margin: 5px 5px 5px 0;
+}
+.panel-boxes {
+	display: inline-block;
+	position: relative;
+	background-color: #D4CFCF;
+	background-color: rgba(212,207,207,.4);
+	border-radius: 15px;
+	margin: 20px auto;
+	text-align: center;
+}
+.main-div {
+	position: relative;
+	top: 60px;
 }
 
