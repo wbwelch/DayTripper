@@ -89,19 +89,19 @@ em {
   	overflow:auto;
 }
 #button-box {
-	position: absolute;
+	position: relative;
 	margin: 10px;
 	padding: 30px;
 }
 #stayin {
 	padding: 15px;
 	display: inline-block;
-	margin: 10px auto;
+	margin: 10px 15px 10px auto;
 }
 #goout {
 	padding: 15px;
 	display: inline-block;
-	margin: 10px auto;
+	margin: 10px auto 10px 15px;
 }
 .hourDiv {
 	border: solid;
