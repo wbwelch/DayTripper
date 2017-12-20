@@ -10,6 +10,8 @@ function displayWeatherInfo(zipcode) {
 		.done(function(response) {
 //creating a div to hold the zipcode
     	var zipDiv = $("<div class ='zipcode'>");
+				console.log(response.hourly_forecast);
+
     	for (var i = 0; i < 10; i++){
 //storing the forecast data
    		 var hour = response.hourly_forecast[i].FCTTIME.civil;
@@ -32,7 +34,9 @@ function displayWeatherInfo(zipcode) {
 		
 }
 //putting zipcode info in
-   		$("#weather").append(zipDiv);
+   		$("#weather").append(zipDiv)
+		$("#weather").prepend("<h3 id='weather-header'>Here's your 10 hour forecast:</h3>")
+		$("#weather").append("<hr id='spacer'>");
    		});
 };
 
