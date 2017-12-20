@@ -1,0 +1,91 @@
+<!doctype html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Day Tripper</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+          <li><a href="index.html">Main Page</a></li>
+          <li><a href="stayin.html"> Stay In </a></li>
+          <li><a href="goout.html"> Go Out </a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<div class="container">
+  	<div class="row">
+  		<div class="col-sm-12">
+  			<div class="page-header">
+  			<h1>What do you want to do</h1>
+			</div>
+    </div>
+</div>
+
+<div class="container">
+  		<div class="col-sm-12">
+  	    	<div class="panel panel-default">
+  				  <div class="panel-heading">YOU ARE HERE!</div>
+  				  <div class="panel-body" id="map" style="height: 512px; width: 512px;">
+                
+            </div>
+  		    </div>
+		</div>
+</div>
+
+<div class="container">
+      <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">What's the weather like?</div>
+            <div class="panel-body" id="weather">
+          
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="container">
+      <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="form-group">
+                <label for="search">
+                  What is your Zip Code?
+                </label>
+                <input type="text" class="form-control" id="zipcodeInput">
+              </div>
+              <button type="search" class="btn" id="zipcodeSearch" style="margin-right: 20px; margin-left: 15px">Search</button>
+            </div>
+          </div>
+      </div>
+</div>
+
+<div class="container">
+      <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">INSERT STAY IN / GO OUT BUTTONS HERE</div>
+            <div class="panel-body">
+              <button id="stayin"><a href="stayin.html">STAY IN</a></button>
+              <button id="goout"><a href="goout.html">GO OUT</a></button>
+            </div>
+          </div>
+    </div>
+</div>
+
+<script src=zipcode.js></script>
+<script src=map.js></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w&libraries=places&callback=initMap"></script>
+
+</body>
