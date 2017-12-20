@@ -1,10 +1,13 @@
 <!doctype html>
+<html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<title>DayTripper</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+
 </head>
 
 <body>
@@ -28,23 +31,8 @@
 <div class="container">
   	<div class="row">
   		<div class="col-sm-12">
-  			<div class="page-header">
-  			<h1>What do you want to do</h1>
-			</div>
     </div>
 </div>
-
-<div class="container">
-  		<div class="col-sm-12">
-  	    	<div class="panel panel-default">
-  				  <div class="panel-heading">YOU ARE HERE!</div>
-  				  <div class="panel-body" id="map" style="height: 512px; width: 512px;">
-                
-            </div>
-  		    </div>
-		</div>
-</div>
-
 <div class="container">
       <div class="col-sm-12">
           <div class="panel panel-default">
@@ -83,9 +71,13 @@
           </div>
     </div>
 </div>
-
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 <script src=assets/javascript/zipcode.js></script>
 <script src=assets/javascript/map.js></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w&libraries=places&callback=initMap"></script>
 
 </body>
+</html>

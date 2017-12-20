@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+/* 
+========================================
+  Custom Body
+========================================
+*/
+
+html {
+  height: 100%;
+}
+body {
+	background-image: url(../images/stayorgo-2020x1226.png);
+ 	background-size: 100%;
+  	min-height: 100%;
+	width: 100%;
+	position: absolute;
+	height: auto;
+	color: white;
+}
+/* 
+========================================
+  Typogrophy
+========================================
+*/
+
+h2 {
+	color: #f6dde2;
+	font: 700 32px/36px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+/* 
+========================================
+  Grid/Style
+========================================
+*/
+.container {
+	background-color: #f5926f;
+	top: 20px;
+	margin: 40px auto;
+	height: 60px;
+	height: auto;
+}
