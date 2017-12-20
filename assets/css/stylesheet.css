@@ -23,10 +23,27 @@ body {
   Typogrophy
 ========================================
 */
-
+h1 {
+	color: #F6EEF0;
+	font-weight: 700;
+	font-size: 36px/40px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
 h2 {
-	color: #f6dde2;
+	color: #F6EEF0;
 	font: 700 32px/36px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+h3 {
+	color: #4c1a52;
+	font: 700 26px/30px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+.inoutbuttons {
+	text-align: center;
+	color: #F6EEF0;
+	font: 300 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+p {
+	color: #4c1a52;
 }
 /* 
 ========================================
@@ -37,6 +54,26 @@ h2 {
 	background-color: #f5926f;
 	top: 20px;
 	margin: 40px auto;
-	height: 60px;
 	height: auto;
 }
+#button-box {
+	position: absolute;
+	margin: 10px;
+	padding: 30px;
+}
+#stayin {
+	display: inline-block;
+	margin: 10px auto;
+}
+#goout {
+	display: inline-block;
+	margin: 10px auto;
+}
+.hourDiv {
+	border: solid;
+	border-width: thin;
+	border-color: #4c1a52;
+	display: inline-block;
+	width: auto;
+}
+

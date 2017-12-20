@@ -15,7 +15,7 @@
 <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Day Tripper</a>
+        <h1><a class="navbar-brand" href="#">Day Tripper</a></h1>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -29,7 +29,7 @@
       </div>
     </div>
 </nav>
-
+<div class="container">
 <div class="container">
   	<div class="row">
   		<div class="col-sm-12">
@@ -38,10 +38,10 @@
 <div class="container">
       <div class="col-sm-12">
           <div class="panel panel-default">
-            <div class="panel-heading">What's the weather like?</div>
-            <div class="panel-body" id="weather">
-          
-            </div>
+			  <div class="panel-heading">
+				  <h3>What's the weather like?</h3>
+			  		<p>Enter your zip code and we'll tell you!</p>
+			  </div>
           </div>
     </div>
 </div>
@@ -61,25 +61,26 @@
           </div>
       </div>
 </div>
+	<div class="panel-body" id="weather"></div>
 
 <div class="container">
       <div class="col-sm-12">
           <div class="panel panel-default">
-            <div class="panel-heading">INSERT STAY IN / GO OUT BUTTONS HERE</div>
-            <div class="panel-body">
-              <button id="stayin"><a href="stayin.html">STAY IN</a></button>
-              <button id="goout"><a href="goout.html">GO OUT</a></button>
+            <div class="panel-body" id="button-box">
+              <button class="btn btn-floating btn-large cyan pulse" id="stayin"><a href="stayin.html"><span class="inoutbuttons">STAY IN</span></a></button>
+              <button class="btn btn-floating btn-large cyan pulse" id="goout"><a href="goout.html"><span class="inoutbuttons">GO OUT</span></a></button>
             </div>
           </div>
     </div>
 </div>
-  <script
+</div>
+  	<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script src=assets/javascript/zipcode.js></script>
-<script src=assets/javascript/map.js></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w&libraries=places&callback=initMap"></script>
+	<script src=assets/javascript/zipcode.js></script>
+	<script src=assets/javascript/map.js></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w&libraries=places&callback=initMap"></script>
 
 </body>
 </html>
