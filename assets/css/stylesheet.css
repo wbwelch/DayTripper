@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* CSS Document */
+/* 
+========================================
+  Custom Body
+========================================
+*/
+
+html {
+  height: 100%;
+}
+body {
+	background-image: url(../images/stayorgo-2020x1226.png);
+ 	background-size: 100%;
+  	min-height: 100%;
+	width: 100%;
+	position: absolute;
+	height: auto;
+	color: white;
+}
+/* 
+========================================
+  Typogrophy
+========================================
+*/
+h1 {
+	color: #F6EEF0;
+	font-weight: 700;
+	font-size: 36px/40px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+h2 {
+	color: #4c1a52;
+	font: 700 18px/22px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+h3 {
+	color: #4c1a52;
+	font: 700 26px/30px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+.inoutbuttons {
+	text-align: center;
+	color: #F6EEF0;
+	font: 300 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+p {
+	color: #4c1a52;
+	font: 400 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	padding: 10px;
+
+}
+em {
+	font-style: italic;
+}
+/* 
+========================================
+  Grid/Style
+========================================
+*/
+#weather-header {
+	text-align: center;
+	position: absolute;
+	
+}
+.container {
+	background-color: none;
+	top: 20px;
+	margin: 40px auto;
+	height: auto;
+	padding: 10px;
+	text-align: center;
+}
+#logo {
+	width: 240px;
+	height: auto;
+	position: relative;
+	display: inline-block;
+	margin: 30px auto;
+}
+.main-box {
+	background-color: #79a9be;
+	background-color: rgba(121,169,190, .7);
+	top: 20px;
+	margin: 40px auto;
+	height: auto;
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+}
+#weather {
+	margin: 10px auto;
+	padding: 10px;
+	white-space:nowrap;
+  	overflow:auto;
+}
+#button-box {
+	position: relative;
+	margin: 10px;
+	padding: 30px;
+}
+#stayin {
+	padding: 15px;
+	display: inline-block;
+	margin: 10px 15px 10px auto;
+}
+#goout {
+	padding: 15px;
+	display: inline-block;
+	margin: 10px auto 10px 15px;
+}
+.hourDiv {
+	border: solid;
+	border-width: medium;
+	border-radius: 25px;
+	padding:5px;
+	margin: 10px 5px;
+	border-color: #4c1a52;
+	display: inline-block;
+	width: auto;
+	background-color: #E9E6E6;
+	background-color: rgba(233,230,230,.7);
+	position: relative;
+	top: 30px;
+}
+#home-header-box {
+	text-align: center;
+}
+#slogan {
+	font-weight: 700;
+	font-size: 20px;
+}
+#spacer {
+	border: none;
+	
+}
+
