@@ -103,6 +103,14 @@ li.loopText {
 	margin: 20px auto;
 	text-align: center;
 }
+input {
+	padding: 5px;
+	margin: 10px auto;
+}
+#youriframe {
+	padding: 2px;
+	margin 10px auto;
+}
 hr.spacer {
 	padding: 10px;
 	margin: 20px;
@@ -217,6 +225,15 @@ a {
 	width: 200px;
 	overflow-wrap: break-all;
 }
+#movie-search-box {
+	min-width: 480px;
+	width: auto;
+}
+#goout {
+	padding: 15px;
+	display: inline-block;
+	margin: 10px 15px 10px auto;
+}
 #home-header-box {
 	text-align: center;
 }
@@ -224,11 +241,7 @@ a {
 	font-weight: 700;
 	font-size: 20px;
 }
-#goout {
-	padding: 15px;
-	display: inline-block;
-	margin: 10px 15px 10px auto;
-}
+\
 .spacers {
 	border: none;
 }
