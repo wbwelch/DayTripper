@@ -14,6 +14,12 @@ function recipeSearch(foodtype){
 
 			for (var k = 0; k<10; k++){
 				var foodDiv = $("<div class = 'recipeCard'>");
+				
+				
+					if (response.hits.length === 0) {
+						$("#recipeOutput").append("<p>" + "Please enter valid recipe ingredient or name." + "</p>");
+					};
+				
 				var recipeName = response.hits[k].recipe.label;
 				var pOne = $("<p>").html("<h2>" + recipeName + "</h2>");
 				foodDiv.append(pOne);
@@ -30,6 +36,7 @@ function recipeSearch(foodtype){
 				
 				var ingList = $("<ul>");
 				for (var i = 0; i < length; i++){
+					
 					var ing = response.hits[k].recipe.ingredients[i].text;
 					var pFour = $("<li class='loopText'>").text(ing);
 					ingList.append(pFour);
