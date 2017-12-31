@@ -78,15 +78,12 @@ a:hover {
 	}
 ul,
 li {
-	padding: 5px;
-	list-style-type: square;
-	display: block;
 	white-space: normal;
 }
 li.loopText {
 	display: block;
 	overflow-wrap: break-all;
-	padding: 2px;
+	padding: 5px;
 	margin 1px auto;
 	list-style-type: circle;
 }

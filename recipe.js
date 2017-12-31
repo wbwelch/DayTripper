@@ -34,11 +34,11 @@ function recipeSearch(foodtype){
 
 				var length = response.hits[k].recipe.ingredients.length;
 				
-				var ingList = $("<ul>");
+				var ingList = $("<ul class='.browser-default'>");
 				for (var i = 0; i < length; i++){
 					
 					var ing = response.hits[k].recipe.ingredients[i].text;
-					var pFour = $("<li class='loopText'>").text(ing);
+					var pFour = $("<li class='loopText .browser-default'>").text(ing);
 					ingList.append(pFour);
 				};
 				foodDiv.append(ingList);
