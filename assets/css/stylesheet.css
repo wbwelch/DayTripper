@@ -94,10 +94,33 @@ li.loopText {
   Grid/Style
 ========================================
 */
+.panel-boxes {
+	display: inline-block;
+	position: relative;
+	background-color: #D4CFCF;
+	background-color: rgba(212,207,207,.4);
+	border-radius: 15px;
+	margin: 20px auto;
+	text-align: center;
+}
 hr.spacer {
 	padding: 10px;
 	margin: 20px;
 	border: none;
+}
+li {
+	display: inline-block;
+}
+a {
+	padding: 10px;
+	margin: 10px auto;
+}
+.nav-link {
+	margin: 5px 5px 5px 0;
+}
+.main-div {
+	position: relative;
+	top: 60px;
 }
 .weather-header {
 	text-align: center;
@@ -145,6 +168,20 @@ hr.spacer {
 	white-space:nowrap;
   	overflow:auto;
 }
+.hourDiv {
+	border: solid;
+	border-width: medium;
+	border-radius: 25px;
+	padding:5px;
+	margin: 10px 5px;
+	border-color: #4c1a52;
+	display: inline-block;
+	background-color: #E9E6E6;
+	background-color: rgba(233,230,230,.7);
+	position: relative;
+	top: 30px;
+	width: 160px;
+}
 #button-box {
 	position: relative;
 	margin: 10px;
@@ -163,26 +200,6 @@ hr.spacer {
 	width: 300px;
 	word-wrap: break-word;
 	display: block;
-	
-}
-#goout {
-	padding: 15px;
-	display: inline-block;
-	margin: 10px 15px 10px auto;
-}
-.hourDiv {
-	border: solid;
-	border-width: medium;
-	border-radius: 25px;
-	padding:5px;
-	margin: 10px 5px;
-	border-color: #4c1a52;
-	display: inline-block;
-	background-color: #E9E6E6;
-	background-color: rgba(233,230,230,.7);
-	position: relative;
-	top: 30px;
-	width: 160px;
 	
 }
 .recipeCard {
@@ -207,32 +224,13 @@ hr.spacer {
 	font-weight: 700;
 	font-size: 20px;
 }
+#goout {
+	padding: 15px;
+	display: inline-block;
+	margin: 10px 15px 10px auto;
+}
 .spacers {
 	border: none;
-	
-}
-li {
-	display: inline-block;
-}
-a {
-	padding: 10px;
-	margin: 10px auto;
-}
-.nav-link {
-	margin: 5px 5px 5px 0;
-}
-.panel-boxes {
-	display: inline-block;
-	position: relative;
-	background-color: #D4CFCF;
-	background-color: rgba(212,207,207,.4);
-	border-radius: 15px;
-	margin: 20px auto;
-	text-align: center;
-}
-.main-div {
-	position: relative;
-	top: 60px;
 }
 /* 
 ========================================
