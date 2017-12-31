@@ -11,7 +11,7 @@
 
 <body>
 
-<div class="container col s12 m12 l12 main-box">
+<div class="container col s12 m12 l12 stay-in-main-box">
 	<nav>
 		<div class="nav-wrapper">
 			<a href="index.html" class="brand-logo center">
@@ -50,8 +50,14 @@
 
 			<div class="col s12 m12 l6 xl6">
 				<div class=" panel-boxes">
-					<div class="panel-heading">INSERT RECIPE SEARCH HERE</div>
-					<div class="panel-body"></div>
+					<div class="panel-heading">What are you hungry for?</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<input type="text" class="form-control" id="recipeInput">
+							<button type="search" class="btn" id="recipeSearch" style="margin-right: 20px; margin-left: 15px">Search</button>
+       					</div>  
+						<div class="panel-body recipesContainer" id="recipeOutput" ></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -73,9 +79,12 @@
 		</div>
 		<hr class="spacer">
 	</div>
-	
+	<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
-	<script src="assets/javascript/app.js"></script>
+	<script src="recipe.js"></script>
 
 </body>
 </html>
