@@ -21,7 +21,7 @@ function recipeSearch(foodtype){
 					};
 				
 				var recipeName = response.hits[k].recipe.label;
-				var pOne = $("<p>").html("<h2>" + recipeName + "</h2>");
+				var pOne = $("<p>").html("<h2 class='wordBreak'>" + recipeName + "</h2>");
 				foodDiv.append(pOne);
 
 				var recipePic = response.hits[k].recipe.image;
@@ -44,13 +44,11 @@ function recipeSearch(foodtype){
 				foodDiv.append(ingList);
 				
 				var health = response.hits[k].recipe.healthLabels;
-				var pFive = $("<p>").text(health);
+				var pFive = $("<p class='wordBreak'>").text(health);
 				foodDiv.append(pFive);
 				
 				$("#recipeOutput").append(foodDiv);
 			}
-
-			
 		
 		});
 };
@@ -59,7 +57,6 @@ function recipeSearch(foodtype){
 function clear(){
 	$("#recipeOutput").empty();
 }
-
 
 $("#recipeSearch").on("click", function(event){
    var foodtype = $("#recipeInput").val().trim();
