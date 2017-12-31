@@ -205,7 +205,8 @@ a {
 	padding: 10px;
 	white-space: nowrap;
 	overflow: auto;
-	width: 300px;
+	max-width: 640px;
+	width: 100%;
 	word-wrap: break-word;
 	display: block;
 	
@@ -222,7 +223,7 @@ a {
 	background-color: rgba(233,230,230,.7);
 	position: relative;
 	vertical-align: top;
-	width: 200px;
+	width: 300px;
 	overflow-wrap: break-all;
 }
 #movie-search-box {
@@ -251,6 +252,6 @@ a {
 ========================================
 */
 .recipeImage {
-	width: 150px;
+	width: 200px;
 	height: auto;
 }
