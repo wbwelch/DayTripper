@@ -28,13 +28,13 @@ function recipeSearch(foodtype){
 
 				var length = response.hits[k].recipe.ingredients.length;
 				
-				
+				var ingList = $("<ul>");
 				for (var i = 0; i < length; i++){
 					var ing = response.hits[k].recipe.ingredients[i].text;
 					var pFour = $("<li class='loopText'>").text(ing);
-					foodDiv.append(pFour);
+					ingList.append(pFour);
 				};
-				
+				foodDiv.append(ingList);
 				
 				var health = response.hits[k].recipe.healthLabels;
 				var pFive = $("<p>").text(health);
