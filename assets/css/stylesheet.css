@@ -89,6 +89,9 @@ li.loopText {
 	margin 1px auto;
 	list-style-type: circle;
 }
+label {
+	color: white;
+}
 /* 
 ========================================
   Grid/Style
@@ -238,9 +241,12 @@ a {
 	font-weight: 700;
 	font-size: 20px;
 }
-\
 .spacers {
 	border: none;
+}
+input[type="radio-button"]{
+    -webkit-appearance: radio;
+	margin: 10px;
 }
 /* 
 ========================================

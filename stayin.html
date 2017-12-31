@@ -58,8 +58,19 @@
 			
 			<div class="col s12 m12 l6 xl6">
 				<div class="panel-boxes" id="movie-search-box">
-				  <div class="panel-heading">WHAT WOULD YOU LIKE TO WATCH?</div>
-				  <div class="panel-body"></div>
+				  <div class="panel-heading">SEARCH FOR A MOVIE OR TV SHOW TO STREAM</div>
+				  <div class="panel-body">
+						<form>
+ 							<input type="text"  id="showSearch">
+								<input type="radio" name="show-search" id="movie-button">
+									<label for="movie-button">Movie</label><br>
+								<input type="radio" name="show-search" id="tv-button">
+									<label for="tv-button">TV Show</label><br>
+								<input type="radio" name="show-search" id="person-button">
+									<label for="person-button">Actor or Director</label><br>
+ 							<input type="submit" class="btn" id="movieSearch">
+						</form>
+				  </div>
 					
 				</div>
 			</div>
@@ -99,6 +110,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
 	<script src="recipe.js"></script>
 	<script src="assets/javascript/youtube.js"></script>
+	<script src="assets/javascript/moviestreaming.js"></script>
 
 </body>
 </html>
