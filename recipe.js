@@ -23,7 +23,7 @@ function recipeSearch(foodtype){
 				foodDiv.append(pTwo);
 
 				var recipeURL = response.hits[k].recipe.shareAs;
-				var pThree =$("<p>").html("<a href='" + recipeURL + "'>" + "Get full recipe here" + "</a>");
+				var pThree =$("<p>").html("<a target='_blank' href='" + recipeURL + "'>" + "Get full recipe here" + "</a>");
 				foodDiv.append(pThree);
 
 				var length = response.hits[k].recipe.ingredients.length;
