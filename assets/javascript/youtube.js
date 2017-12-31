@@ -7,3 +7,4 @@ function go_get(){
  ifr.src = target_url;
  return false;
 }
+
