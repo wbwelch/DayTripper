@@ -62,3 +62,9 @@ $("#recipeSearch").on("click", function(event){
 });
 });
 
+$("#recipeInput").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#recipeSearch").click();
+    }
+});
+
