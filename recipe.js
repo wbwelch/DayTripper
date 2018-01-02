@@ -13,7 +13,7 @@ function recipeSearch(foodtype){
 			
 
 			for (var k = 0; k<10; k++){
-				var foodDiv = $("<div class = 'recipeCard'>");
+				var foodDiv = $("<div class = 'dynCard'>");
 				
 				
 					if (response.hits.length === 0) {
