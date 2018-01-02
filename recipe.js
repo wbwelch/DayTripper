@@ -64,11 +64,12 @@ $("#recipeSearch").on("click", function(event){
    recipeSearch(foodtype);
    return false;
 });
-});
+
 
 $("#recipeInput").keyup(function(event) {
     if (event.keyCode === 13) {
         $("#recipeSearch").click();
     }
 });
+	});
 
