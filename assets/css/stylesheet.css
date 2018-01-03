@@ -93,6 +93,18 @@ label {
 .wordBreak {
 		white-space: normal;
 }
+.small {
+	font-size: 12px/14px;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 700;
+}
+.movie-title {
+	font-size: 22px/24px;
+}
 /* 
 ========================================
   Grid/Style
@@ -247,6 +259,9 @@ a {
 }
 input[type="radio-button"]{
     -webkit-appearance: radio;
+	margin: 10px;
+}
+.btn {
 	margin: 10px;
 }
 /* 
