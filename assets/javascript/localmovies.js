@@ -38,24 +38,26 @@ function localMovieSearch() {
 					nowPlayingDiv.append(pFive);
 				};
 				
-				for (var j = 0; j < 10; j++) {
-					var theater = response[i].showtimes[j].theatre.name;
-						console.log(theater);	
-				};
-				
-				for (var l = 0; l < 10; l++) {
-				var showtimes = response[i].showtimes[l].dateTime;
-						console.log(showtimes);
-				};
-				
-				var getShowtimesButton = $("<button class='btn' id='movieZipSearch' style='margin-right: 20px; margin-left: 15px'>Get Showtimes</button>");
+				var getShowtimesButton = $("<button class='btn movieTimes' style='margin-right: 20px; margin-left: 15px'>Get Showtimes</button>");
+				getShowtimesButton.attr("data-index", i);
 				nowPlayingDiv.append(getShowtimesButton);
+				
+				
+				
+			
+				//append movie times to div
+				//movie-title movie title div id
+				//showtimes-output showtimes div id
+				
+				
+				
 				
 				
 				//console.log(movieName);
 				//console.log(runtime);
 				//console.log(moviePoster);
 				//console.log(rating);
+				
 				$("#movieZipOutput").append(nowPlayingDiv);
 				
 			}
@@ -70,7 +72,41 @@ $("#movieZipSearch").on("click", function(event){
 	localMovieSearch(zipcode);
 
 });
-		  
+
+
+
+$(".movieTimes").on("click", function(event) {
+	event.preventDefault();
+	$("#movie-title").empty();
+ 	$("#showtimes-output").empty();
+	var currentIndex = $(this).attr("data-index");
+	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-02" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+	console.log(currentIndex);
+  		//$.ajax({
+			//url: queryURL,
+        	//method: "GET"
+      		//}).done(function(response) {
+		  		//console.log(response);
+			
+			//for (var i = 0; i < 15; i++) {
+//				for (var j = 0; j < 10; j++) {
+//				var theater = response[i].showtimes[j].theatre.name;
+//					console.log(theater);	
+//				var	theaterName = $("<p>").html(theater);
+//					
+//				};
+//				
+//			for (var l = 0; l < 10; l++) {
+//				var showtimes = response[i].showtimes[l].dateTime;
+//				console.log(showtimes);
+//				};
+			//});
+});
+	
+//  hide go-out-div
+//	show movie times div
+//});
+
 //title
 //runtime
 //preferredimage
