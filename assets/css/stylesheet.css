@@ -67,6 +67,9 @@ nav {
 	font: 400 18px/22px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	border-radius: 15px;
 }
+.new-review {
+	color: black;
+}
 /* 
 ========================================
   Grid/Style
@@ -184,3 +187,11 @@ a {
 	top: 60px;
 }
 
+/* 
+========================================
+Log Page
+========================================
+*/
+.validate {
+	color: black;
+}
