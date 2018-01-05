@@ -70,7 +70,7 @@ nav {
 
 .new-review {
 	color: black;
-=======
+}
 a {
 	color: #4c1a52;
 	font: 700 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
@@ -153,7 +153,6 @@ a {
 .weather-header {
 	text-align: center;
 	position: absolute;
-	
 }
 .navbar {
 	background: none;
@@ -277,7 +276,7 @@ Log Page
 */
 .validate {
 	color: black;
-=======
+}
 /* 
 ========================================
   Images

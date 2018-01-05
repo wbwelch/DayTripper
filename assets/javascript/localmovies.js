@@ -2,11 +2,9 @@
 
 var zipcode = "";
 
-function localMovieSearch() { 
-	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-02" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+function localMovieSearch(zipcode) { 
+	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-04" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
 	
-	
-
   		$.ajax({
 			url: queryURL,
         	method: "GET"
@@ -66,6 +64,7 @@ function localMovieSearch() {
 
 
 $("#movieZipSearch").on("click", function(event){
+	console.log("test");
 	event.preventDefault();
 	$("#movieZipOutput").empty();
 	zipcode = $("#movieZipInput").val().trim();
@@ -75,13 +74,13 @@ $("#movieZipSearch").on("click", function(event){
 
 
 
-$(".movieTimes").on("click", function(event) {
-	event.preventDefault();
-	$("#movie-title").empty();
- 	$("#showtimes-output").empty();
-	var currentIndex = $(this).attr("data-index");
-	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-02" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
-	console.log(currentIndex);
+$//(".movieTimes").on("click", function(event) {
+//	event.preventDefault();
+//	$("#movie-title").empty();
+// 	$("#showtimes-output").empty();
+//	var currentIndex = $(this).attr("data-index");
+//	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-02" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+//	console.log(currentIndex);
   		//$.ajax({
 			//url: queryURL,
         	//method: "GET"
@@ -101,7 +100,7 @@ $(".movieTimes").on("click", function(event) {
 //				console.log(showtimes);
 //				};
 			//});
-});
+//});
 	
 //  hide go-out-div
 //	show movie times div
