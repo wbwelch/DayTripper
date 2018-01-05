@@ -70,12 +70,14 @@ nav {
 
 .new-review {
 	color: black;
-=======
+}
+
 a {
 	color: #4c1a52;
 	font: 700 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	padding: 10px;
 }
+
 a:hover {
 	color: #2E0D32;
 	underline: thin;
@@ -88,7 +90,7 @@ li.loopText {
 	display: block;
 	overflow-wrap: break-all;
 	padding: 5px;
-	margin 1px auto;
+	margin: 1px auto;
 	list-style-type: circle;
 }
 label {
@@ -129,7 +131,7 @@ input {
 }
 #youriframe {
 	padding: 2px;
-	margin 10px auto;
+	margin: 10px auto;
 }
 hr.spacer {
 	padding: 10px;
@@ -277,7 +279,7 @@ Log Page
 */
 .validate {
 	color: black;
-=======
+}
 /* 
 ========================================
   Images
