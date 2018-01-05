@@ -67,20 +67,90 @@ nav {
 	font: 400 18px/22px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	border-radius: 15px;
 }
+
 .new-review {
 	color: black;
+=======
+a {
+	color: #4c1a52;
+	font: 700 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	padding: 10px;
+}
+a:hover {
+	color: #2E0D32;
+	underline: thin;
+	}
+ul,
+li {
+	white-space: normal;
+}
+li.loopText {
+	display: block;
+	overflow-wrap: break-all;
+	padding: 5px;
+	margin 1px auto;
+	list-style-type: circle;
+}
+label {
+	color: white;
+}
+.wordBreak {
+		white-space: normal;
+}
+.small {
+	font-size: 12px/14px;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 700;
+}
+.movie-title {
+	font-size: 22px/24px;
 }
 /* 
 ========================================
   Grid/Style
 ========================================
 */
+.panel-boxes {
+	display: inline-block;
+	position: relative;
+	background-color: #D4CFCF;
+	background-color: rgba(212,207,207,.4);
+	border-radius: 15px;
+	margin: 20px auto;
+	text-align: center;
+}
+input {
+	padding: 5px;
+	margin: 10px auto;
+}
+#youriframe {
+	padding: 2px;
+	margin 10px auto;
+}
 hr.spacer {
 	padding: 10px;
 	margin: 20px;
 	border: none;
 }
-#weather-header {
+li {
+	display: inline-block;
+}
+a {
+	padding: 10px;
+	margin: 10px auto;
+}
+.nav-link {
+	margin: 5px 5px 5px 0;
+}
+.main-div {
+	position: relative;
+	top: 60px;
+}
+.weather-header {
 	text-align: center;
 	position: absolute;
 	
@@ -106,7 +176,7 @@ hr.spacer {
 }
 .main-box {
 	background-color: #79a9be;
-	background-color: rgba(121,169,190, .7);
+	background-color: rgba(121,169,190, .6);
 	top: 20px;
 	margin: 40px auto;
 	height: auto;
@@ -115,11 +185,30 @@ hr.spacer {
 	border-radius: 25px;
 	text-align: center;
 }
+.stay-in-main-box {
+	background-color: #EB6474;
+	background-color: rgba(235,100,116,.60);
+	border-radius: 25px;
+}
 #weather {
 	margin: 10px auto;
 	padding: 10px;
 	white-space:nowrap;
   	overflow:auto;
+}
+.hourDiv {
+	border: solid;
+	border-width: medium;
+	border-radius: 25px;
+	padding:5px;
+	margin: 10px 5px;
+	border-color: #4c1a52;
+	display: inline-block;
+	background-color: #E9E6E6;
+	background-color: rgba(233,230,230,.7);
+	position: relative;
+	top: 30px;
+	width: 160px;
 }
 #button-box {
 	position: relative;
@@ -131,12 +220,18 @@ hr.spacer {
 	display: inline-block;
 	margin: 10px 15px 10px auto;
 }
-#goout {
-	padding: 15px;
-	display: inline-block;
-	margin: 10px 15px 10px auto;
+.recipesContainer {
+	margin: 10px auto;
+	padding: 10px;
+	white-space: nowrap;
+	overflow: auto;
+	max-width: 300px;
+	width: 100%;
+	word-wrap: break-word;
+	display: block;
+	
 }
-.hourDiv {
+.dynCard {
 	border: solid;
 	border-width: medium;
 	border-radius: 25px;
@@ -144,13 +239,17 @@ hr.spacer {
 	margin: 10px 5px;
 	border-color: #4c1a52;
 	display: inline-block;
-	width: auto;
 	background-color: #E9E6E6;
 	background-color: rgba(233,230,230,.7);
 	position: relative;
-	top: 30px;
-	width: 160px;
-	
+	vertical-align: top;
+	width: 200px;
+	overflow-wrap: break-all;
+}
+#goout {
+	padding: 15px;
+	display: inline-block;
+	margin: 10px 15px 10px auto;
 }
 #home-header-box {
 	text-align: center;
@@ -159,33 +258,17 @@ hr.spacer {
 	font-weight: 700;
 	font-size: 20px;
 }
-#spacer {
+.spacers {
 	border: none;
-	
 }
-li {
-	display: inline-block;
+input[type="radio-button"]{
+    -webkit-appearance: radio;
+	margin: 10px;
 }
-a {
-	padding: 10px;
-	margin: 10px auto;
+.btn {
+	margin: 10px;
 }
-.nav-link {
-	margin: 5px 5px 5px 0;
-}
-.panel-boxes {
-	display: inline-block;
-	position: relative;
-	background-color: #D4CFCF;
-	background-color: rgba(212,207,207,.4);
-	border-radius: 15px;
-	margin: 20px auto;
-	text-align: center;
-}
-.main-div {
-	position: relative;
-	top: 60px;
-}
+
 
 /* 
 ========================================
@@ -194,4 +277,13 @@ Log Page
 */
 .validate {
 	color: black;
+=======
+/* 
+========================================
+  Images
+========================================
+*/
+.recipeImage {
+	width: 150px;
+	height: auto;
 }

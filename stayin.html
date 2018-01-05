@@ -11,7 +11,7 @@
 
 <body>
 
-<div class="container col s12 m12 l12 main-box">
+<div class="container col s12 m12 l12 stay-in-main-box">
 	<nav>
 		<div class="nav-wrapper">
 			<a href="index.html" class="brand-logo center">
@@ -42,40 +42,75 @@
 
 		<div class="row">
 			<div class="col s12 m12 l6 xl6">
-				<div class="panel-boxes">
-				  <div class="panel-heading">INSERT MOVIES SEARCH HERE</div>
-				  <div class="panel-body"></div>
-				</div>
-			</div>
-
-			<div class="col s12 m12 l6 xl6">
 				<div class=" panel-boxes">
-					<div class="panel-heading">INSERT RECIPE SEARCH HERE</div>
-					<div class="panel-body"></div>
+					<div class="panel-heading">SEARCH FOR GENRE OR MUSICAL ARTIST</div>
+					<div class="panel-body">
+						<form onsubmit="go_get(); return false;" >
+ 							<input type="text"  id="yourtextfield"/>
+ 							<input type="submit" id="musicSearch" value="Search Playlists" />
+						</form>
+
+					<iframe id="youriframe"></iframe>
+						
+					</div>
 				</div>
 			</div>
+			
+			<div class="col s12 m12 l6 xl6">
+				<div class="panel-boxes" id="movie-search-box">
+				  <div class="panel-heading">SEARCH FOR A MOVIE OR TV SHOW TO STREAM</div>
+				  <div class="panel-body">
+						<form>
+ 							<input type="text"  id="showSearch">
+								<input type="radio" name="show-search" id="movie-button">
+									<label for="movie-button">Movie</label><br>
+								<input type="radio" name="show-search" id="tv-button">
+									<label for="tv-button">TV Show</label><br>
+								<input type="radio" name="show-search" id="person-button">
+									<label for="person-button">Actor or Director</label><br>
+ 							<input type="submit" class="btn" id="movieSearch">
+						</form>
+				  </div>
+					
+				</div>
+			</div>
+			
 		</div>
-
+		
 		<div class="row">
 			<div class="col s12 m12 l6 xl6">
 				<div class=" panel-boxes">
-					<div class="panel-heading">INSERT FOOD DELIVERY SEARCH HERE</div>
+					<div class="panel-heading">WHAT WOULD YOU LIKE TO ORDER?</div>
 					<div class="panel-body"></div>
 				</div>
 			</div>
-
-		<div class="col s12 m12 l6 xl6">
-			<div class=" panel-boxes">
-				<div class="panel-heading">INSERT MUSIC BUTTONS HERE</div>
-				<div class="panel-body"></div>
+		
+			<div class="col s12 m12 l6 xl6">
+				<div class=" panel-boxes">
+					<div class="panel-heading">WHAT WOULD YOU LIKE TO COOK?</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<input type="text" class="form-control" id="recipeInput">
+							<button type="search" class="btn" id="recipeSearch" style="margin-right: 20px; margin-left: 15px">Search</button>
+       					</div>  
+						<div class="panel-body recipesContainer" id="recipeOutput" ></div>
+					</div>
+				</div>
 			</div>
+			
 		</div>
-		</div>
+		
 		<hr class="spacer">
 	</div>
 	
+	<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
-	<script src="assets/javascript/app.js"></script>
+	<script src="recipe.js"></script>
+	<script src="assets/javascript/youtube.js"></script>
+	<script src="assets/javascript/moviestreaming.js"></script>
 
 </body>
 </html>
