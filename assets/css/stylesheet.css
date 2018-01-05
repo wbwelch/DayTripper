@@ -109,6 +109,10 @@ strong {
 .movie-title {
 	font-size: 22px/24px;
 }
+.inline-button {
+	display: inline-block;
+	margin: 10px;
+}
 /* 
 ========================================
   Grid/Style
@@ -122,6 +126,7 @@ strong {
 	border-radius: 15px;
 	margin: 20px auto;
 	text-align: center;
+	width: 90%;
 }
 input {
 	padding: 5px;
@@ -130,6 +135,8 @@ input {
 #youriframe {
 	padding: 2px;
 	margin 10px auto;
+	width: 100%;
+	height: 100%;
 }
 hr.spacer {
 	padding: 10px;
@@ -224,7 +231,6 @@ a {
 	padding: 10px;
 	white-space: nowrap;
 	overflow: auto;
-	max-width: 300px;
 	width: 100%;
 	word-wrap: break-word;
 	display: block;
@@ -244,6 +250,9 @@ a {
 	vertical-align: top;
 	width: 200px;
 	overflow-wrap: break-all;
+}
+.full {
+	width: 100%;
 }
 #goout {
 	padding: 15px;
