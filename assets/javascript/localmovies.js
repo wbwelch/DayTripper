@@ -40,15 +40,6 @@ function localMovieSearch(zipcode) {
 				var getTicketsButton = $("<a target='_blank' href='http://www.fandango.com'><button class='btn movieTickets' style='margin-right: 20px; margin-left: 15px'>Buy Tickets</button></a>");
 				getTicketsButton.attr("data-index", i);
 				nowPlayingDiv.append(getTicketsButton);
-			
-				//append movie times to div
-				//movie-title movie title div id
-				//showtimes-output showtimes div id
-				
-				//console.log(movieName);
-				//console.log(runtime);
-				//console.log(moviePoster);
-				//console.log(rating);
 				
 				$("#movieZipOutput").append(nowPlayingDiv);
 				
@@ -73,12 +64,9 @@ $("#movieZipSearch").on("click", function(event){
 
 });
 
+$("#movieZipInput").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#movieZipSearch").click();
+    }
+});
 
-
-
-
-//title
-//runtime
-//preferredimage
-//ratings
-//showtimes - array - dateTime and theatre.name
