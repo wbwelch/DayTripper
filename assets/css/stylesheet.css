@@ -67,6 +67,10 @@ nav {
 	font: 400 18px/22px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	border-radius: 15px;
 }
+
+.new-review {
+	color: black;
+=======
 a {
 	color: #4c1a52;
 	font: 700 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
@@ -264,6 +268,16 @@ input[type="radio-button"]{
 .btn {
 	margin: 10px;
 }
+
+
+/* 
+========================================
+Log Page
+========================================
+*/
+.validate {
+	color: black;
+=======
 /* 
 ========================================
   Images
