@@ -88,7 +88,7 @@ li.loopText {
 	display: block;
 	overflow-wrap: break-all;
 	padding: 5px;
-	margin 1px auto;
+	margin: 1px auto;
 	list-style-type: circle;
 }
 label {
