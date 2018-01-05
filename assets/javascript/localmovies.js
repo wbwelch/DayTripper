@@ -29,7 +29,7 @@ function localMovieSearch(zipcode) {
 				nowPlayingDiv.append(pTwo);
 				var pThree = $("<h2 class='wordBreak'>").html(runtime[2,3] + " hour(s) " + runtime[5,6] + " min.");
 				nowPlayingDiv.append(pThree);
-				var pFour = $("<p style='color:white' class='wordBreak'>").html("<strong>" + rating + "</strong>");
+				var pFour = $("<p style='color:white' class='wordBreak'>").html("<strong>" + "Rated: " + rating + "</strong>");
 				nowPlayingDiv.append(pFour);
 				
 				for (var k = 0; k < 3; k++) {

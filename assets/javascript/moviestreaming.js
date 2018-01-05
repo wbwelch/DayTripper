@@ -43,7 +43,7 @@ function showStreamSearch() {
 					
 					var pOne = $("<div>").html("<h2 class='wordBreak movie-title'>" + showTitle + "</h2>");
 					streamDiv.append(pOne);
-					var pTwo = $("<p style='color:white' class='wordBreak'>").html("<strong>" + "Rating: " + rating + "</strong>");
+					var pTwo = $("<p style='color:white' class='wordBreak'>").html("<strong>" + "Rated: " + rating + "</strong>");
 					streamDiv.append(pTwo);
 					
 					if (streamShowType == 'movies') {
