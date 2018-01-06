@@ -281,8 +281,18 @@ input[type="radio-button"]{
 .btn {
 	margin: 10px;
 }
-
-
+#zipInput {
+	width: 300px;
+	display: block;
+	margin: 10px auto;
+	color: white;
+	font-size: 22px/24px;
+	font-weight: 700;
+	border-bottom-color: white;
+}
+form {
+	align-content: center;
+}
 /* 
 ========================================
 Log Page

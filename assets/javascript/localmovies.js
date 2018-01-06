@@ -59,14 +59,10 @@ $("#movieZipSearch").on("click", function(event){
 	console.log("test");
 	event.preventDefault();
 	$("#movieZipOutput").empty();
-	zipcode = $("#movieZipInput").val().trim();
+	zipcode = $("#zipInput").val().trim();
 	localMovieSearch(zipcode);
 
 });
 
-$("#movieZipInput").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#movieZipSearch").click();
-    }
-});
+
 
