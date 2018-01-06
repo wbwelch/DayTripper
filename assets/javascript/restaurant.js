@@ -25,8 +25,13 @@ function locate(zipCode){
 
 	$.ajax({
           url: queryURL,
-          method: "GET"
-          })
+          method: "GET",
+		  complete: function(e){
+			 if (e.status === 400) {
+				$("#movieZipOutput").append("<h2>Please enter your zip code.</h2>");
+			};
+		  }
+        })
 		.done(function(response) {
 		console.log(response);
 

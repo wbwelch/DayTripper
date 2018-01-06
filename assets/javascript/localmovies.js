@@ -5,12 +5,20 @@ var zipcode = "";
 
 function localMovieSearch(zipcode) { 
 	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-05" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+		
 	
   		$.ajax({
 			url: queryURL,
-        	method: "GET"
+        	method: "GET",
+			complete: function(e){
+				 if (e.status === 400) {
+					$("#movieZipOutput").append("<h2>Please enter your zip code.</h2>");
+				};
+			}
       		}).done(function(response) {
 		  		console.log(response);
+			
+			
 			
 			for (var i = 0; i < 15; i++) {
 				var movieName = response[i].title;
