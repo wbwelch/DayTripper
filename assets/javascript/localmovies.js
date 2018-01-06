@@ -1,16 +1,28 @@
 // JavaScript Document
 
+var year = moment().year();
+var month = moment().month();
+var date = moment().date();
 var zipcode = "";
+var todaysDate = year + "-" + (month + 1) + "-" + date;
 
 
 function localMovieSearch(zipcode) { 
-	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-04" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + todaysDate + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+		
 	
   		$.ajax({
 			url: queryURL,
-        	method: "GET"
+        	method: "GET",
+			complete: function(e){
+				 if (e.status === 400) {
+					$("#movieZipOutput").append("<h2>Please enter your zip code.</h2>");
+				};
+			}
       		}).done(function(response) {
 		  		console.log(response);
+			
+			
 			
 			for (var i = 0; i < 15; i++) {
 				var movieName = response[i].title;
@@ -29,7 +41,7 @@ function localMovieSearch(zipcode) {
 				nowPlayingDiv.append(pTwo);
 				var pThree = $("<h2 class='wordBreak'>").html(runtime[2,3] + " hour(s) " + runtime[5,6] + " min.");
 				nowPlayingDiv.append(pThree);
-				var pFour = $("<p style='color:white' class='wordBreak'>").html("<strong>" + rating + "</strong>");
+				var pFour = $("<p style='color:white' class='wordBreak'>").html("<strong>" + "Rated: " + rating + "</strong>");
 				nowPlayingDiv.append(pFour);
 				
 				for (var k = 0; k < 3; k++) {
@@ -40,15 +52,6 @@ function localMovieSearch(zipcode) {
 				var getTicketsButton = $("<a target='_blank' href='http://www.fandango.com'><button class='btn movieTickets' style='margin-right: 20px; margin-left: 15px'>Buy Tickets</button></a>");
 				getTicketsButton.attr("data-index", i);
 				nowPlayingDiv.append(getTicketsButton);
-			
-				//append movie times to div
-				//movie-title movie title div id
-				//showtimes-output showtimes div id
-				
-				//console.log(movieName);
-				//console.log(runtime);
-				//console.log(moviePoster);
-				//console.log(rating);
 				
 				$("#movieZipOutput").append(nowPlayingDiv);
 				
@@ -63,22 +66,14 @@ function localMovieSearch(zipcode) {
 			});
 	};
 
-
 $("#movieZipSearch").on("click", function(event){
 	console.log("test");
 	event.preventDefault();
 	$("#movieZipOutput").empty();
-	zipcode = $("#movieZipInput").val().trim();
+	zipcode = $("#zipInput").val().trim();
 	localMovieSearch(zipcode);
 
 });
 
 
 
-
-
-//title
-//runtime
-//preferredimage
-//ratings
-//showtimes - array - dateTime and theatre.name
