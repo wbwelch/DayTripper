@@ -111,6 +111,14 @@ strong {
 .movie-title {
 	font-size: 22px/24px;
 }
+
+td {
+	word-wrap: break-word;
+}
+
+table {
+	color: black;
+}
 /* 
 ========================================
   Grid/Style

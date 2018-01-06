@@ -81,5 +81,8 @@ var config = {
             $("#activity-input").text(snapshot.val().activity);
             $("#review-input").text(snapshot.val().review);
         });
+    function clearField() {
+        document.date-input.reset();
+    }
 });
          
