@@ -59,9 +59,6 @@ function showStreamSearch() {
 					var pFour = $("<p class='wordBreak'>").html("<em style='color:white;'>" + overview + "</em>");
 					streamDiv.append(pFour);
 					
-				//	var pFive = $("<div>").html("<h2 class='wordBreak'>" + showTitle + "</h2>");
-//					streamDiv.append(pOne);
-					
 					if (streamShowType == 'movies') {
 						if (newResponse.free_web_sources.length > 0) {
 						streamDiv.append("<h2>Free Stream Sources:</h2>")
@@ -106,9 +103,7 @@ function showStreamSearch() {
 					};
 					
 					$("#showOutput").append(streamDiv);
-					
-//stream = newResponse.channels[0].livestream.web[j];
-					
+										
 				  });
 		  });
 };
@@ -138,4 +133,3 @@ $("#showSearch").keyup(function(event) {
         $("#movieSearch").click();
     }
 });
-//movie, person, show

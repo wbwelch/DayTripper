@@ -71,5 +71,5 @@ $("#recipeInput").keyup(function(event) {
         $("#recipeSearch").click();
     }
 });
-	});
+});
 

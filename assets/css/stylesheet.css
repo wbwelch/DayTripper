@@ -110,10 +110,6 @@ strong {
 .movie-title {
 	font-size: 22px/24px;
 }
-.inline-button {
-	display: inline-block;
-	margin: 10px;
-}
 /* 
 ========================================
   Grid/Style
@@ -324,6 +320,10 @@ form {
 #latlng {
 	width: 225px;
 	color: #4c1a52;
+}
+.inline-button {
+	display: inline-block;
+	margin: 10px;
 }
 /* 
 ========================================

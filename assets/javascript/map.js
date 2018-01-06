@@ -9,7 +9,6 @@ var map, infoWindow;
           });
           infoWindow = new google.maps.InfoWindow;
 
-          // Try HTML5 geolocation.
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
 			  
@@ -24,44 +23,44 @@ var map, infoWindow;
 				console.log(longitude);
 				console.log(position);
 				
-              infoWindow.setPosition(pos);
-              infoWindow.setContent('<p>Location found.</p>');
-              infoWindow.open(map);
-              map.setCenter(pos);
-				function initMapReverse() {
-				  var map = new google.maps.Map(document.getElementById('map'), {
+            	infoWindow.setPosition(pos);
+            	infoWindow.setContent('<p>Location found.</p>');
+              	infoWindow.open(map);
+              	map.setCenter(pos);
+			  	function initMapReverse() {
+				  	var map = new google.maps.Map(document.getElementById('map'), {
 					zoom: 18,
 					center: {lat: latitude, lng: longitude}
 				  });
-				  var geocoder = new google.maps.Geocoder;
-				  var infowindow = new google.maps.InfoWindow;
+				  	var geocoder = new google.maps.Geocoder;
+				  	var infowindow = new google.maps.InfoWindow;
 
-				  document.getElementById('submit').addEventListener('click', function() {
+				  	document.getElementById('submit').addEventListener('click', function() {
 					geocodeLatLng(geocoder, map, infowindow);
 				  });
 				}
 
 				function geocodeLatLng(geocoder, map, infowindow) {
-				  var latlng = {lat: latitude, lng: longitude};
-				  geocoder.geocode({'location': latlng}, function(results, status) {
+				  	var latlng = {lat: latitude, lng: longitude};
+				  	geocoder.geocode({'location': latlng}, function(results, status) {
 					if (status === 'OK') {
-					  if (results[0]) {
-						map.setZoom(18);
-						var marker = new google.maps.Marker({
-						  position: latlng,
-						  map: map
+					  	if (results[0]) {
+							map.setZoom(18);
+							var marker = new google.maps.Marker({
+						  	position: latlng,
+						  	map: map
 						});
 						infowindow.setContent("<p>" + results[0].formatted_address);
 						infowindow.open(map, marker);
-					  } else {
-						window.alert('No results found');
-					  }
+					  	} else {
+							window.alert('No results found');
+					  	}
 					} else {
 					  window.alert('Geocoder failed due to: ' + status);
 					}
 				  });
 				}
-			$("#submit").on("click", initMapReverse());
+				$("#submit").on("click", initMapReverse());
 
             }, function() {
               handleLocationError(true, infoWindow, map.getCenter());
