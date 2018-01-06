@@ -69,7 +69,7 @@ function showStreamSearch() {
 							var streamStore = newResponse.free_web_sources[n].display_name;
 							stream = newResponse.free_web_sources[n].link;
 
-							var pFive = $("<div>").html("<a target='_blank' href=" + stream + "><button class='btn inline-button'>" + streamStore + "</button></a>");
+							var pFive = $("<div>").html("<a target='_blank' href='" + stream + "'>" + "<button class='btn inline-button'>" + streamStore + "</button></a>");
 						
 							streamDiv.append(pFive);
 						};
@@ -83,7 +83,7 @@ function showStreamSearch() {
 								stream = newResponse.channels[l].live_stream.web[m].link;
 								
 							
-								var pFive = $("<div>").html("<a target='_blank' href=" + stream + "><button class='btn inline-button'>" + streamStore + "</button></a>");
+								var pFive = $("<div>").append("<a target='_blank' href=" + stream + "><button class='btn inline-button'>" + streamStore + "</button></a>");
 								streamDiv.append(pFive);
 								};
 						};

@@ -16,6 +16,7 @@ var config = {
   var name = "";
   var activity = "";
   var review = "";
+  var userZip = "";
 
   //Capture "submit" button click
   $("#submit-input").on("click", function(event){
@@ -62,6 +63,7 @@ var config = {
                 console.log(firebaseActivity);
                 console.log(firebaseReview);
                 console.log("---------------")
+				console.log(userZip);
 
             //Append the new items to the table
             $("#new-review").append("<tr><td>" + firebaseDate + 
@@ -83,6 +85,27 @@ var config = {
         });
     function clearField() {
         document.date-input.reset();
-    }
+    };
+
+	$("#zipCodeInput").on("click", function(event){
+		event.preventDefault();
+		userZip = $("#zipcodeInput").val().trim();
+		sessionStorage.clear();
+		sessionStorage.setItem("zip", userZip);
+	});
+	$("#deliverySearch").on("click", function(event){
+		event.preventDefault();
+		userZip = $("#zipInput").val().trim();
+		localStorage.clear();
+		localStorage.setItem("zip", userZip);
+	});
+	
+
+	
+	//local storage retireval
+	
+	$("#zipInput").val(localStorage.getItem("zip"));
+	$("#zipcodeInput").val(localStorage.getItem("zip"))
+	
 });
          

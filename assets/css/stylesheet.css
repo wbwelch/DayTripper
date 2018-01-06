@@ -191,7 +191,7 @@ a {
 	height: auto;
 	position: relative;
 	display: inline-block;
-	margin: 30px auto;
+	margin: 60px auto;
 }
 .main-box {
 	background-color: #79a9be;
@@ -238,31 +238,6 @@ a {
 	padding: 15px;
 	display: inline-block;
 	margin: 10px 15px 10px auto;
-}
-.dynDivContainer {
-	margin: 10px auto;
-	padding: 10px;
-	white-space: nowrap;
-	overflow: auto;
-	width: 100%;
-	word-wrap: break-word;
-	display: block;
-	
-}
-.dynCard {
-	border: solid;
-	border-width: medium;
-	border-radius: 15px;
-	padding:5px;
-	margin: 10px 5px;
-	border-color: #4c1a52;
-	display: inline-block;
-	background-color: #E9E6E6;
-	background-color: rgba(233,230,230,.7);
-	position: relative;
-	vertical-align: top;
-	width: 200px;
-	overflow-wrap: break-all;
 }
 .full {
 	width: 100%;
@@ -335,6 +310,36 @@ form {
 .inline-button {
 	display: inline-block;
 	margin: 10px;
+}
+.dynDivContainer {
+	margin: 10px auto;
+	padding: 10px;
+	white-space: nowrap;
+	overflow: auto;
+	width: 100%;
+	word-wrap: break-word;
+	display: block;
+	
+}
+.dynCard {
+	border: solid;
+	border-width: medium;
+	border-radius: 15px;
+	padding:5px;
+	margin: 10px 5px;
+	border-color: #4c1a52;
+	display: inline-block;
+	background-color: #E9E6E6;
+	background-color: rgba(233,230,230,.7);
+	position: relative;
+	vertical-align: top;
+	width: 200px;
+	overflow-wrap: break-all;
+}
+rImage {
+	width: 80%;
+	height: auto;
+	margin: 7px auto;
 }
 /* 
 ========================================

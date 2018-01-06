@@ -41,12 +41,15 @@ function locate(zipCode){
 					url: 'https://developers.zomato.com/api/v2.1/search?lat='+latitude+'&lon='+longitude+'&count=10',
 					headers: { 'user-key': '8abc659c37b2bd36942c2a208a719dae'}
 			}).done(function (response) {
+				
 				console.log(response);
-				var rDiv = $("<div class = 'foodtype dynCard'>");
+				
+				var rDiv = $("<div class='dynCard'>");
 
 				for (var k = 0; k<10; k++){
+					
 				var rName = response.restaurants[k].restaurant.name;
-				var pOne = $("<h2 class='wordBreak'>").text(rName);
+				var pOne = $("<div>").html("<h2 class='wordBreak'>" + rName + "</h2>");
 				rDiv.append(pOne);
 
 				var photo = response.restaurants[k].restaurant.thumb;
@@ -76,6 +79,7 @@ function locate(zipCode){
 
 $("#deliverySearch").on("click", function(event){
 	zipCode = $("#zipInput").val().trim();
+	$("#deliveryOutput").empty();
     locate(zipCode);
    return false;
 });
