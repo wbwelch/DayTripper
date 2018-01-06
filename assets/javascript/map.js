@@ -1,6 +1,6 @@
 
-var latitude = "";
-var longitude = "";
+var latitude = 0;
+var longitude = 0;
 var map, infoWindow;
         function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
@@ -12,21 +12,34 @@ var map, infoWindow;
           // Try HTML5 geolocation.
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
+			  
               var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude,
-				  
               };
+				
 				longitude = position.coords.longitude;
 				latitude = position.coords.latitude;
 				console.log(latitude);
 				console.log(longitude);
+				console.log(position);
+				
               infoWindow.setPosition(pos);
               infoWindow.setContent('Location found.');
               infoWindow.open(map);
               map.setCenter(pos);
             }, function() {
               handleLocationError(true, infoWindow, map.getCenter());
+					function addressSearch() {
+						var queryURL2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w";
+
+							  $.ajax({
+								url: queryURL2,
+								method: "GET"
+							  }).done(function(newResponse) {
+								  console.log(newResponse);
+							  });
+						};
             });
           } else {
             // Browser doesn't support Geolocation
@@ -41,6 +54,7 @@ var map, infoWindow;
                                 'Error: Your browser doesn\'t support geolocation.');
           infoWindow.open(map);
         };
+
 
 //working on code to convert lat and long to physical address. How do I make it wait to locate lat and long before running this function
 //http://techslides.com/convert-latitude-and-longitude-to-a-street-address
