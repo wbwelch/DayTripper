@@ -4,7 +4,7 @@ var zipcode = "";
 
 
 function localMovieSearch(zipcode) { 
-	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-04" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-05" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
 	
   		$.ajax({
 			url: queryURL,
