@@ -294,6 +294,37 @@ input[type="radio-button"]{
 form {
 	align-content: center;
 }
+#map {
+	height: 100%;
+	width: auto;
+}
+#floating-panel {
+	position: absolute;
+	top: 40px;
+	z-index: 5;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+	border-radius: 15px;
+	text-align: center;
+	font-family: 'Roboto','sans-serif';
+	line-height: 30px;
+	padding-left: 10px;
+}
+#floating-panel {
+	position: absolute;
+	right: 5%;
+	margin-left: -180px;
+	width: 150px;
+	z-index: 5;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+	}
+#latlng {
+	width: 225px;
+	color: #4c1a52;
+}
 /* 
 ========================================
 Log Page

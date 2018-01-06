@@ -25,21 +25,47 @@ var map, infoWindow;
 				console.log(position);
 				
               infoWindow.setPosition(pos);
-              infoWindow.setContent('Location found.');
+              infoWindow.setContent('<p>Location found.</p>');
               infoWindow.open(map);
               map.setCenter(pos);
+				function initMapReverse() {
+				  var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 18,
+					center: {lat: latitude, lng: longitude}
+				  });
+				  var geocoder = new google.maps.Geocoder;
+				  var infowindow = new google.maps.InfoWindow;
+
+				  document.getElementById('submit').addEventListener('click', function() {
+					geocodeLatLng(geocoder, map, infowindow);
+				  });
+				}
+
+				function geocodeLatLng(geocoder, map, infowindow) {
+				  var latlng = {lat: latitude, lng: longitude};
+				  geocoder.geocode({'location': latlng}, function(results, status) {
+					if (status === 'OK') {
+					  if (results[0]) {
+						map.setZoom(18);
+						var marker = new google.maps.Marker({
+						  position: latlng,
+						  map: map
+						});
+						infowindow.setContent("<p>" + results[0].formatted_address);
+						infowindow.open(map, marker);
+					  } else {
+						window.alert('No results found');
+					  }
+					} else {
+					  window.alert('Geocoder failed due to: ' + status);
+					}
+				  });
+				}
+			$("#submit").on("click", initMapReverse());
+
             }, function() {
               handleLocationError(true, infoWindow, map.getCenter());
-					function addressSearch() {
-						var queryURL2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w";
-
-							  $.ajax({
-								url: queryURL2,
-								method: "GET"
-							  }).done(function(newResponse) {
-								  console.log(newResponse);
-							  });
-						};
+				
             });
           } else {
             // Browser doesn't support Geolocation
@@ -55,6 +81,17 @@ var map, infoWindow;
           infoWindow.open(map);
         };
 
+
+//function addressSearch() {
+//	var queryURL2 = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w";
+//
+//		  $.ajax({
+//			url: queryURL2,
+//			method: "GET"
+//		  }).done(function(newResponse) {
+//			  console.log(newResponse);
+//		  });
+//	};
 
 //working on code to convert lat and long to physical address. How do I make it wait to locate lat and long before running this function
 //http://techslides.com/convert-latitude-and-longitude-to-a-street-address

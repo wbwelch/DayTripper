@@ -13,8 +13,11 @@
 	<div class="container">
   		<div class="col-sm-12">
   	    	<div class="panel panel-default">
-  				  <div class="panel-heading">YOU ARE HERE!</div>
-  				  <div class="panel-body" id="map" style="height: 512px; width: 512px;">
+  				  <div class="panel-heading">Where Am I?</div>
+				 <div id="floating-panel">
+				    <input id="submit" type="button" value="Find Me">
+				 </div>
+  				  <div class="panel-body" id="map" style="height: 512px; width: 512px; width: auto;">
                 
             </div>
   		    </div>
@@ -26,5 +29,6 @@
   crossorigin="anonymous"></script>
 <script src=assets/javascript/map.js></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr0JPLjGiIEkdpGe60caL1HkansZ5Wf9w&libraries=places&callback=initMap"></script>
+
 </body>
 </html>
