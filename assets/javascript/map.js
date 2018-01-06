@@ -1,3 +1,14 @@
+var config = {
+    apiKey: "AIzaSyDQSNOjvpEhCUJVqSMF0BGLMPj7EIZ2FA8",
+    authDomain: "daytripper-7f668.firebaseapp.com",
+    databaseURL: "https://daytripper-7f668.firebaseio.com",
+    projectId: "daytripper-7f668",
+    storageBucket: "daytripper-7f668.appspot.com",
+    messagingSenderId: "681039633666"
+  };
+  firebase.initializeApp(config);
+	var database = firebase.database();
+
 
 var latitude = 0;
 var longitude = 0;
@@ -51,6 +62,10 @@ var map, infoWindow;
 						  	map: map
 						});
 						infowindow.setContent("<p>" + results[0].formatted_address);
+							console.log(results[0].address_components[6].short_name);
+							var zip = results[0].address_components[6].short_name;
+							localStorage.clear();
+							localStorage.setItem("zip", zip);
 						infowindow.open(map, marker);
 					  	} else {
 							window.alert('No results found');

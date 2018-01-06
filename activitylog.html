@@ -19,71 +19,72 @@
     <div class="container main-box">
         <nav>
     <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo center">
-        <img src="assets/images/logo.png" class="logoMain" alt="Day Tripper logo">
-      </a>
+        <img class="brand-logo center" style="width:30%;padding:20px;margin:30px auto;" src="assets/images/logo.png" class="logoMain" alt="Day Tripper logo">
        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
         <ul id="nav-mobile" class="right">
           <li><a class="nav-link" href="index.html">Main Page</a></li>
           <li><a class="nav-link" href="stayin.html"> Stay In </a></li>
           <li><a class="nav-link" href="goout.html"> Go Out </a></li>
-          <li><a class="nav-link" href="activitylog.html"> Reviews </li>
+		  <li><a class="nav-link" href="activitylog.html"> Reviews</a></li>
           <li><a class="nav-link" href="map.html" target="_blank"> Where Am I? </a></li>
         </ul>
     </div>
   </nav>
       <!-- Activity Form-->
-      <div class="container">
-        <div class="col-sm-12">
-          <div class="panel panel-default">
-            <div class="panel-body">
+      <div class="container" style="position: relative; top:40px;">
+	  	<div class="row">
+			<div class="col s12 m12 l12 xl12">
+			  <div class="panel panel-default">
+				<div class="panel-body" style="padding:5px;margin:15px auto;">
 
-             <form>
-               <div class="form-group">
-                  <label for="date-input">Date:</label>
-                  <input class="form-control" id="date-input" type="date" placeholder="01/01/2018" required="required">
-                </div>
-                <div class="form-group">
-                  <label for="name-input">Name:</label>
-                  <input class="form-control" id="name-input" type="text" placeholder="John Smith" required="required">
-                </div>
-                <div class="form-group">
-                  <label for="activity-input">Activity:</label>
-                  <input class="form-control" id="activity-input" type="text" placeholder="What activity did you chose?" required="required">
-                </div>
-                <div class="form-group">
-                  <label for="review-input">Review:</label>
-                  <textarea class="materialize-textarea form-control" id="review-input" type="text"  name="message" placeholder="Did you enjoy your pick?  Let others know!" required="required"></textarea>
-                </div>
-                <input class="btn" type="submit" name="submit" id="submit-input">
-             </form>
-    
-            </div>
-          </div>
-        </div>
+				 <form>
+				   <div class="form-group">
+					  <label for="date-input">Date:</label>
+					  <input class="form-control" id="date-input" type="date" placeholder="01/01/2018" required="required">
+					</div>
+					<div class="form-group">
+					  <label for="name-input">Name:</label>
+					  <input class="form-control" id="name-input" type="text" placeholder="John Smith" required="required">
+					</div>
+					<div class="form-group">
+					  <label for="activity-input">Activity:</label>
+					  <input class="form-control" id="activity-input" type="text" placeholder="What activity did you chose?" required="required">
+					</div>
+					<div class="form-group">
+					  <label for="review-input">Review:</label>
+					  <textarea class="materialize-textarea form-control" id="review-input" type="text"  name="message" placeholder="Did you enjoy your pick?  Let others know!" required="required"></textarea>
+					</div>
+					<input class="btn" type="submit" name="submit" id="submit-input">
+				 </form>
+
+				</div>
+			  </div>
+			</div>
+		  </div>
       </div>
       <!-- Recent User Activity Table-->
       <div class="container">
-        <div class="col-sm-12">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              
-               <table class="table table-striped" style="table-layout: fixed; width: 100%" id="new-review">
-                <thead>
-                  <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Activity</th>
-                    <th scope="col" style="word-wrap: break-word">Review</th>
-                  </tr>
-                </thead>
-               </table>
-               
-            </div>
-          </div>
-        </div>
-      </div>
+	  	<div class="row">
+			<div class="col-sm-12">
+			  <div class="panel panel-default">
+				<div class="panel-body">
 
+				   <table class="table table-striped" style="table-layout: fixed; width: 100%" id="new-review">
+					<thead>
+					  <tr>
+						<th scope="col">Date</th>
+						<th scope="col">Name</th>
+						<th scope="col">Activity</th>
+						<th scope="col" style="word-wrap: break-word">Review</th>
+					  </tr>
+					</thead>
+				   </table>
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
     </div>
      <!-- jQuery -->
       <script src="https://code.jquery.com/jquery.js"></script>

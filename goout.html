@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Out of the House</title>
 	
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
@@ -15,15 +17,16 @@
 <div class="container col s12 m12 l12 main-box">
 	<nav>
 		<div class="nav-wrapper">
-				<img src="assets/images/logo.png" class="brand-logo center logoMain" alt="Day Tripper logo">
-				<ul id="nav-mobile" class="right">
+			<img src="assets/images/logo.png" class="brand-logo center logoMain" alt="Day Tripper logo">
+				<a href="#" data-activates="mobil-demo-out" class="button-collapse"><img class="nav-icon" src="assets/images/menu-alt-512.png"></a>
+				<ul id="nav-mobile-out" class="right hide-on-med-and-down">
 					<li><a class="nav-link" href="index.html">Main Page</a></li>
 					<li><a class="nav-link" href="stayin.html">Stay In</a></li>
 					<li><a class="nav-link" href="goout.html">Go Out</a></li>
 					<li><a class="nav-link" href="activitylog.html">Reviews</a></li>
 					<li><a class="nav-link" href="map.html" target="_blank">Where Am I?</a></li>
 				</ul>
-				<ul class="side-nav" id="mobile-demo">
+				<ul class="side-nav" id="mobil-demo-out">
 					<li><a href="index.html">Main Page</a></li>
 					<li><a href="stayin.html">Stay In</a></li>
 					<li><a href="goout.html">Go Out</a></li>
@@ -34,11 +37,7 @@
 	</nav>
 		
 	<div id="go-out-div" class="main-div">
-		<div class="row">
-			<div class="col s12 m12 l12">
-				<h1>What do you want to do</h1>
-			</div>
-		</div>
+		
 	<div class="row">
 		<div class="col s12 m12 l12 xl12">
 			<div class="panel-boxes">
@@ -116,6 +115,8 @@
 	<script src="assets/javascript/localmovies.js"></script>
 	<script src="assets/javascript/ticketmaster.js" ></script>
 	<script src="assets/javascript/restaurant.js" ></script>
+	<script>  $(".button-collapse").sideNav();</script>
+
 
 </body>
 </html>

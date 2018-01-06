@@ -78,20 +78,20 @@ var config = {
 
         database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
 
-            $("#date-input").text(snapshot.val().date);
-            $("#name-input").text(snapshot.val().name);
-            $("#activity-input").text(snapshot.val().activity);
-            $("#review-input").text(snapshot.val().review);
+           //$("#date-input").text(snapshot.val().date);
+           //$("#name-input").text(snapshot.val().name);
+           // $("#activity-input").text(snapshot.val().activity);
+           //$("#review-input").text(snapshot.val().review);
         });
     function clearField() {
         document.date-input.reset();
     };
-
-	$("#zipCodeInput").on("click", function(event){
+	//local strage set
+	$("#zipcodeSearch").on("click", function(event){
 		event.preventDefault();
 		userZip = $("#zipcodeInput").val().trim();
-		sessionStorage.clear();
-		sessionStorage.setItem("zip", userZip);
+		localStorage.clear();
+		localStorage.setItem("zip", userZip);
 	});
 	$("#deliverySearch").on("click", function(event){
 		event.preventDefault();
@@ -100,10 +100,8 @@ var config = {
 		localStorage.setItem("zip", userZip);
 	});
 	
-
 	
-	//local storage retireval
-	
+	//local storage get
 	$("#zipInput").val(localStorage.getItem("zip"));
 	$("#zipcodeInput").val(localStorage.getItem("zip"))
 	

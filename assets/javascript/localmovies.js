@@ -10,10 +10,11 @@ var todaysDate = year + "-" + (month + 1) + "-" + date;
 function localMovieSearch(zipcode) { 
 	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + todaysDate + "&zip=" + zipcode + "&api_key=mxf9w6dyukegk3x3jfmpfqqu";
 		
-	
+		//local movies in theaters ajax
   		$.ajax({
 			url: queryURL,
         	method: "GET",
+			//error message
 			complete: function(e){
 				 if (e.status === 400) {
 					$("#movieZipOutput").append("<h2>Please enter your zip code.</h2>");
@@ -23,8 +24,9 @@ function localMovieSearch(zipcode) {
 		  		console.log(response);
 			
 			
-			//api call return loop
+			//api call response loop
 			for (var i = 0; i < 15; i++) {
+				//variable definitions for response
 				var movieName = response[i].title;
 				var runtime = response[i].runTime;
 				var moviePoster = response[i].preferredImage.uri;
@@ -70,7 +72,7 @@ function localMovieSearch(zipcode) {
 			}
 			});
 	};
-//on click submit
+//on click run function
 $("#movieZipSearch").on("click", function(event){
 	console.log("test");
 	event.preventDefault();

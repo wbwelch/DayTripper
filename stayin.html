@@ -18,8 +18,8 @@
 		<div class="nav-wrapper">
 			<img src="assets/images/logo.png" class="brand-logo center logoMain" alt="Day Tripper logo">
 
-			 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
-				<ul id="nav-mobile" class="right">
+			 <a href="#" data-activates="mobile-demo" class="button-collapse"><img class="nav-icon" src="assets/images/menu-alt-512.png"><i class="material-icons"></i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
 
 					<li><a class="nav-link" href="index.html">Main Page</a></li>
 					<li><a class="nav-link" href="stayin.html">Stay In</a></li>
@@ -38,11 +38,6 @@
 	</nav>
 
 	<div class="main-div">
-		<div class="row">
-			<div class="col s12 m12 l12">
-				<h1>What do you want to do</h1>
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col s12 m12 l12 xl12">
@@ -79,15 +74,6 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="row">
-			<div class="col s12 m12 l12 xl12">
-				<div class=" panel-boxes">
-					<div class="panel-heading">WHAT WOULD YOU LIKE TO ORDER?</div>
-					<div class="panel-body dynDivContainer"></div>
-				</div>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col s12 m12 l12 xl12">
 				<div class=" panel-boxes">
@@ -114,6 +100,6 @@
 	<script src="assets/javascript/recipe.js"></script>
 	<script src="assets/javascript/youtube.js"></script>
 	<script src="assets/javascript/moviestreaming.js"></script>
-
+	<script>  $(".button-collapse").sideNav();</script>
 </body>
 </html>
