@@ -17,8 +17,21 @@
 
   <body>
     <div class="container main-box">
-      <img class="logoMain" src="assets/images/logo.png" alt="Day Tripper Logo">
-      <br>
+        <nav>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo center">
+        <img src="assets/images/logo.png" class="logoMain" alt="Day Tripper logo">
+      </a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
+        <ul id="nav-mobile" class="right">
+          <li><a class="nav-link" href="index.html">Main Page</a></li>
+          <li><a class="nav-link" href="stayin.html"> Stay In </a></li>
+          <li><a class="nav-link" href="goout.html"> Go Out </a></li>
+          <li><a class="nav-link" href="activitylog.html"> Reviews </li>
+          <li><a class="nav-link" href="map.html" target="_blank"> Where Am I? </a></li>
+        </ul>
+    </div>
+  </nav>
       <!-- Activity Form-->
       <div class="container">
         <div class="col-sm-12">
@@ -55,13 +68,13 @@
           <div class="panel panel-default">
             <div class="panel-body">
               
-               <table class="table table-striped" id="new-review">
+               <table class="table table-striped" style="table-layout: fixed; width: 100%" id="new-review">
                 <thead>
                   <tr>
                     <th scope="col">Date</th>
                     <th scope="col">Name</th>
                     <th scope="col">Activity</th>
-                    <th scope="col">Review</th>
+                    <th scope="col" style="word-wrap: break-word">Review</th>
                   </tr>
                 </thead>
                </table>
