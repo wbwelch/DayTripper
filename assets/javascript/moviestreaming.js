@@ -17,7 +17,7 @@ function showStreamSearch() {
 		  if (response.results.length == 0) {
 						$("#showOutput").append("<h2>Please check show or movie spelling and button selection.</h2>");
 					};
-		  for (var i = 0; i < 1; i++) {
+		  for (var i = 0; i < 1 ; i++) {
 			movieID = response.results[0].id;
 			  console.log(movieID);
 		  };
@@ -57,6 +57,7 @@ function showStreamSearch() {
 					}
 					
 					var pFour = $("<p class='wordBreak'>").html("<em style='color:white;'>" + overview + "</em>");
+					
 					streamDiv.append(pFour);
 					
 					if (streamShowType == 'movies') {
@@ -102,7 +103,7 @@ function showStreamSearch() {
 						streamDiv.append(pSix);
 					};
 					
-					$("#showOutput").append(streamDiv);
+					$("#showOutput").append(streamDiv).one();
 										
 				  });
 		  });
