@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Out of the House</title>
 	
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
@@ -50,7 +52,7 @@
 							<input type="text" class="form-control" id="movieZipInput">
 							<button type="search" class="btn" id="movieZipSearch" style="margin-right: 20px; margin-left: 15px">Search</button>
        					</div>  
-						<div class="panel-body recipesContainer" id="movieZipOutput" ></div>	
+						<div class="panel-body dynDivContainer" id="movieZipOutput" ></div>	
 				  </div>
 				</div>
 			</div>
@@ -58,8 +60,17 @@
 		<div class="row">
 			<div class="col s12 m12 l12 xl12">
 				<div class=" panel-boxes">
-					<div class="panel-heading">INSERT DINING/DRINKING SEARCH HERE</div>
-					<div class="panel-body"></div>
+					<div class="panel-heading">SEARCH FOR LOCAL RESTAURANTS</div>
+					<div class="panel-body">
+						<div class="form-group">
+           	 				<label for="search">
+               					What is your zip code?
+            				</label>
+            				<input type="text" class="form-control" id="zipInput">
+            				<button type="search" class="btn" id="deliverySearch" style="margin-right: 20px; margin-left: 15px">Search</button>
+        				</div> 
+						<div class="panel-body dynDivContainer" id="deliveryOutput"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -102,6 +113,7 @@
   		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
 	<script src="assets/javascript/localmovies.js"></script>
+	<script src="assets/javascript/restaurant.js"></script>
 
 </body>
 </html>

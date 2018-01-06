@@ -39,13 +39,13 @@ function locate(zipCode){
 	            method: 'GET',
 	            url: 'https://developers.zomato.com/api/v2.1/search?lat='+latitude+'&lon='+longitude+'&count=10',
                 headers: { 'user-key': '8abc659c37b2bd36942c2a208a719dae'}
-	        }).done(function (response) {
-	            console.log(response);
-	            var rDiv = $("<div class = 'foodtype'>");
+		}).done(function (response) {
+			console.log(response);
+			var rDiv = $("<div class = 'foodtype dynCard'>");
 
 			for (var k = 0; k<10; k++){
 			var rName = response.restaurants[k].restaurant.name;
-			var pOne = $("<p>").text(rName);
+			var pOne = $("<h2 class='wordBreak'>").text(rName);
 			rDiv.append(pOne);
 
 			var photo = response.restaurants[k].restaurant.thumb;
@@ -53,23 +53,22 @@ function locate(zipCode){
 			rDiv.append(image);
 
 			var cuisine = response.restaurants[k].restaurant.cuisines;
-			var pTwo = $("<p>").text(cuisine);
+			var pTwo = $("<p class='wordBreak'>").text(cuisine);
 			rDiv.append(pTwo);
 
 			var address = response.restaurants[k].restaurant.location.address;
-			var pThree = $("<p>").text(address);
+			var pThree = $("<p class='wordBreak'>").text(address);
 			rDiv.append(pThree);
 
 			var menu = response.restaurants[k].restaurant.menu_url;
-			var pF = $("<p>").text(menu);
+			var pF = $("<p class='wordBreak'>").text(menu);
 			rDiv.append(pF);
-			}
+			};
 
 
 			$("#deliveryOutput").append(rDiv);
-			});
-	        });
-
+		});
+	});
 };	
 
 
@@ -78,4 +77,10 @@ $("#deliverySearch").on("click", function(event){
 	var zipCode = $("#zipInput").val().trim();
     locate(zipCode);
    return false;
+});
+
+$("#zipInput").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#deliverySearch").click();
+    }
 });

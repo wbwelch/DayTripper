@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Cozy at Home</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
@@ -43,7 +45,7 @@
 		<div class="row">
 			<div class="col s12 m12 l12 xl12">
 				<div class=" panel-boxes">
-					<div class="panel-heading">SEARCH FOR GENRE OR MUSICAL ARTIST</div>
+					<div class="panel-heading">SEARCH FOR GENRE OR MUSICAL ARTIST PLAYLIST</div>
 					<div class="panel-body">
 						<form onsubmit="go_get(); return false;" >
  							<input type="text"  id="yourtextfield"/>
@@ -59,7 +61,7 @@
 		<div class="row">
 			<div class="col s12 m12 l12 xl12">
 				<div class="panel-boxes" id="movie-search-box">
-				  <div class="panel-heading">SEARCH FOR A MOVIE OR TV SHOW TO STREAM</div>
+				  <div class="panel-heading">SEARCH FOR A MOVIE OR TV SHOW ONLINE</div>
 				  <div class="panel-body">
 						<form>
  							<input type="text"  id="showSearch">
@@ -69,7 +71,7 @@
 									<label for="tv-button">TV Show</label><br>
  							<input type="submit" class="btn" id="movieSearch">
 						</form>
-					  <div class="panel-body recipesContainer" id="showOutput" ></div>
+					  <div class="panel-body dynDivContainer" id="showOutput" ></div>
 				  </div>
 					
 				</div>
@@ -80,7 +82,7 @@
 			<div class="col s12 m12 l12 xl12">
 				<div class=" panel-boxes">
 					<div class="panel-heading">WHAT WOULD YOU LIKE TO ORDER?</div>
-					<div class="panel-body"></div>
+					<div class="panel-body dynDivContainer"></div>
 				</div>
 			</div>
 		</div>
@@ -93,7 +95,7 @@
 							<input type="text" class="form-control" id="recipeInput">
 							<button type="search" class="btn" id="recipeSearch" style="margin-right: 20px; margin-left: 15px">Search</button>
        					</div>  
-						<div class="panel-body recipesContainer" id="recipeOutput" ></div>
+						<div class="panel-body dynDivContainer" id="recipeOutput" ></div>
 					</div>
 				</div>
 			</div>

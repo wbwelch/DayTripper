@@ -95,7 +95,7 @@ label {
 	color: white;
 }
 .wordBreak {
-		white-space: normal;
+	white-space: normal;
 }
 .small {
 	font-size: 12px/14px;
@@ -231,7 +231,7 @@ a {
 	display: inline-block;
 	margin: 10px 15px 10px auto;
 }
-.recipesContainer {
+.dynDivContainer {
 	margin: 10px auto;
 	padding: 10px;
 	white-space: nowrap;
