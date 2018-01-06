@@ -1,10 +1,14 @@
 // JavaScript Document
 
+var year = moment().year();
+var month = moment().month();
+var date = moment().date();
 var zipcode = "";
+var todaysDate = year + "-" + (month + 1) + "-" + date;
 
 
 function localMovieSearch(zipcode) { 
-	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + "2018-01-05" + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
+	var queryURL = "http://data.tmsapi.com/v1.1/movies/showings?startDate=" + todaysDate + "&zip=" + zipcode + "&api_key=guyv9by6h494tz4s9xfvpqrq";
 		
 	
   		$.ajax({
@@ -61,7 +65,6 @@ function localMovieSearch(zipcode) {
 			}
 			});
 	};
-
 
 $("#movieZipSearch").on("click", function(event){
 	console.log("test");
