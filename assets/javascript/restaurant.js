@@ -21,18 +21,17 @@
 var zipCode = "";
 function locate(zipCode){
 	var SearchTerm = $(this).attr("data-name");
-	var queryURL = "http://autocomplete.wunderground.com/aq?query=" + zipCode;
+	var queryURL = "http://api.wunderground.com/api/79db6a03d8151c8c/geolookup/q/" + zipCode + ".json" ;
 
 	$.ajax({
           url: queryURL,
-          method: "GET"
-		  
+          method: "GET",
         })
 		.done(function(response) {
 			console.log(response);
 
-			var latitude = response.RESULTS["0"].lat;
-			var longitude = response.RESULTS["0"].lon;
+			var latitude = response.location.lat;
+			var longitude = response.location.lon;
 			console.log(latitude);
 			console.log(longitude);
 
@@ -44,33 +43,37 @@ function locate(zipCode){
 				
 				console.log(response);
 				
-				var rDiv = $("<div class='dynCard'>");
+				
 
 				for (var k = 0; k<10; k++){
 					
-				var rName = response.restaurants[k].restaurant.name;
-				var pOne = $("<div>").html("<h2 class='wordBreak'>" + rName + "</h2>");
-				rDiv.append(pOne);
+					var rDiv = $("<div class='dynCard'>");	
 
-				var photo = response.restaurants[k].restaurant.thumb;
-				var image = $("<img>").attr("src", photo);
-				rDiv.append(image);
+					var rName = response.restaurants[k].restaurant.name;
+					var pOne = $("<div>").html("<h2 class='wordBreak'>" + rName + "</h2>");
+					rDiv.append(pOne);
 
-				var cuisine = response.restaurants[k].restaurant.cuisines;
-				var pTwo = $("<p class='wordBreak'>").text(cuisine);
-				rDiv.append(pTwo);
+					var photo = response.restaurants[k].restaurant.thumb;
+					var image = $("<img>").attr("src", photo);
+					rDiv.append(image);
 
-				var address = response.restaurants[k].restaurant.location.address;
-				var pThree = $("<p class='wordBreak'>").text(address);
-				rDiv.append(pThree);
+					var cuisine = response.restaurants[k].restaurant.cuisines;
+					var pTwo = $("<p class='wordBreak'>").text(cuisine);
+					rDiv.append(pTwo);
 
-				var menu = response.restaurants[k].restaurant.menu_url;
-				var pF = $("<p class='wordBreak'>").text(menu);
-				rDiv.append(pF);
+					var address = response.restaurants[k].restaurant.location.address;
+					var pThree = $("<p class='wordBreak'>").text(address);
+					rDiv.append(pThree);
+
+					var menu = response.restaurants[k].restaurant.menu_url;
+					var pF = $("<p class='wordBreak'>").text(menu);
+					rDiv.append(pF);
+					
+					$("#deliveryOutput").append(rDiv);
 				};
 
 
-				$("#deliveryOutput").append(rDiv);
+				
 			});
 		});
 };	

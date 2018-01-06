@@ -55,8 +55,10 @@ function localMovieSearch(zipcode) {
 				var getTicketsButton = $("<a target='_blank' href='http://www.fandango.com'><button class='btn movieTickets' style='margin-right: 20px; margin-left: 15px'>Buy Tickets</button></a>");
 				getTicketsButton.attr("data-index", i);
 				nowPlayingDiv.append(getTicketsButton);
+				
 				//append main div
 				$("#movieZipOutput").append(nowPlayingDiv);
+				
 				//on click get tickets button
 				$("#data-index" + [i]).on("click", function(event) {
 					event.preventDefault();

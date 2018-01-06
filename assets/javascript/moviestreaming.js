@@ -99,7 +99,7 @@ function showStreamSearch() {
 							}	
 						} else {
 						streamDiv.append("<h2>More Info:</h2>")	
-						var pSix = $("<div>").html("<a target='_blank' href=" + purchaseTV + "><button class='btn' style='margin-right: 20px; margin-left: 15px'>tv.com</button></a>");
+						var pSix = $("<div>").html("<a target='_blank' href='" + purchaseTV + "'><button class='btn' style='margin-right: 20px; margin-left: 15px'>tv.com</button></a>");
 						streamDiv.append(pSix);
 					};
 					
