@@ -120,6 +120,10 @@ td {
 table {
 	color: black;
 }
+.actType {
+	font-size: 18px/22px;
+	color: white;
+}
 /* 
 ========================================
   Grid/Style
@@ -340,6 +344,7 @@ form {
 .full {
 	width: 100%;
 }
+
 /* 
 ========================================
 Log Page
