@@ -59,6 +59,7 @@ function eventInfo(zipCode){
 
 $("#eventSearch").on("click", function(event){
 	zipCode = $("#zipInput").val().trim();
+	$("#eventOutput").empty();
     eventInfo(zipCode);
    return false;
 });

@@ -99,6 +99,18 @@ var config = {
 		localStorage.clear();
 		localStorage.setItem("zip", userZip);
 	});
+	$("#movieZipSearch").on("click", function(event){
+		event.preventDefault();
+		userZip = $("#zipInput").val().trim();
+		localStorage.clear();
+		localStorage.setItem("zip", userZip);
+	});
+	$("#eventSearch").on("click", function(event){
+		event.preventDefault();
+		userZip = $("#zipInput").val().trim();
+		localStorage.clear();
+		localStorage.setItem("zip", userZip);
+	});
 	
 	
 	//local storage get

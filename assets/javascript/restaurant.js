@@ -28,7 +28,7 @@ $( document ).ready(function(){
 		//zip code to lat long ajax
 		$.ajax({
 			  url: queryURL,
-			  method: "GET",
+			  method: "GET"
 			})
 			.done(function(response) {
 				console.log(response);
