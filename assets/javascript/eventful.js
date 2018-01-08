@@ -81,7 +81,7 @@ $( document ).ready(function(){
 						
 							//event url
 							var eventUrl = events[0].getElementsByTagName("venue_url");
-							var p4= $("<p class='wordBreak'>").html("<a href='" + eventUrl[i].innerHTML + "'>More Info</a>");
+							var p4= $("<p class='wordBreak'>").html("<a target='_blank' href='" + eventUrl[i].innerHTML + "'>More Info</a>");
 							eventfulDiv.append(p4);
 
 						//append main div to html

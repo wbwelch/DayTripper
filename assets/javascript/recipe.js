@@ -32,11 +32,6 @@ $( document ).ready(function(){
 					var pTwo = $("<img class='recipeImage'>").attr("src", recipePic);
 					foodDiv.append(pTwo);
 					
-					//full recipe link
-					var recipeURL = response.hits[k].recipe.shareAs;
-					var pThree =$("<p>").html("<a target='_blank' href='" + recipeURL + "'>" + "GET FULL RECIPE" + "</a>");
-					foodDiv.append(pThree);
-					
 					//ingredients
 					var length = response.hits[k].recipe.ingredients.length;
 					var ingList = $("<ul class='.browser-default'>");
@@ -54,6 +49,11 @@ $( document ).ready(function(){
 					var health = response.hits[k].recipe.healthLabels;
 					var pFive = $("<p class='wordBreak'>").text(health);
 					foodDiv.append(pFive);
+						
+					//full recipe link
+					var recipeURL = response.hits[k].recipe.shareAs;
+					var pThree =$("<p>").html("<a target='_blank' href='" + recipeURL + "'>" + "GET FULL RECIPE" + "</a>");
+					foodDiv.append(pThree);
 					
 					//append main div
 					$("#recipeOutput").append(foodDiv);

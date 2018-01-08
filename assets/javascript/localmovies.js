@@ -32,30 +32,35 @@ $( document ).ready(function(){
 					//variable definitions for response
 					var movieName = response[i].title;
 					var runtime = response[i].runTime;
-					var moviePoster = response[i].preferredImage.uri;
 					var rating = response[i].ratings[0].code;
 					var topCast = response[i].topCast;
 					var summary = response[i].shortDescription;
 
 					//main div
 					var nowPlayingDiv = $("<div class = 'dynCard'>");
+					
 					//movie name div
 					var pOne = $("<div>").html("<h2 class='wordBreak movie-title'>" + movieName + "</h2>");
 					nowPlayingDiv.append(pOne);
+					
 					//movie summary div
 					var pTwo = $("<p class='wordBreak'>").html("<em style='color:white;'>" + summary + "</em>");
 					nowPlayingDiv.append(pTwo);
+					
 					//runtime div
 					var pThree = $("<h2 class='wordBreak'>").html(runtime[2,3] + " hour(s) " + runtime[5,6] + " min.");
 					nowPlayingDiv.append(pThree);
+					
 					//rating div
 					var pFour = $("<p style='color:white' class='wordBreak'>").html("<strong>" + "Rated: " + rating + "</strong>");
 					nowPlayingDiv.append(pFour);
+					
 					//cast loop
 					for (var k = 0; k < 3; k++) {
 						var pFive = $("<p class='wordBreak small'>").html(topCast[k]);
 						nowPlayingDiv.append(pFive);
 					};
+					
 					//get tickets button
 					var getTicketsButton = $("<a target='_blank' href='http://www.fandango.com'><button class='btn movieTickets' style='margin-right: 20px; margin-left: 15px'>Buy Tickets</button></a>");
 					getTicketsButton.attr("data-index", i);

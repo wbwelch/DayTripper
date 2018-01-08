@@ -44,7 +44,7 @@ $( document ).ready(function(){
 						var streamDiv = $("<div class = 'dynCard full'>");
 						
 						//movie or show name
-						var pOne = $("<div>").html("<h2 class='wordBreak movie-title'>" + showTitle + "</h2>");
+						var pOne = $("<div>").html("<h1 class='wordBreak'>" + showTitle + "</h1>");
 						
 						streamDiv.append(pOne);
 						//movie or show rating

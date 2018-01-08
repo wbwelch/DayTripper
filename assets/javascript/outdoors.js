@@ -56,7 +56,7 @@ $( document ).ready(function(){
 						
 						//event url
 						var url = response.results[i].urlAdr;
-						var p4 = $("<hr><p style='margin: 0 0 20px 0;' class='wordBreak'>").html("<a href='" + url + "'>More Information</a>");
+						var p4 = $("<hr><p style='margin: 0 0 20px 0;' class='wordBreak'>").html("<a target='_blank'  href='" + url + "'>More Information</a>");
 						eventDiv.append(p4);
 						
 						//append main div

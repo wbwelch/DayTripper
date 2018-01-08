@@ -74,7 +74,7 @@ nav {
 }
 
 a {
-	color: #4c1a52;
+	color: #79a9be;
 	font: 700 14px/16px Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	padding: 10px;
 }
@@ -110,7 +110,7 @@ strong {
 	font-weight: 700;
 }
 .movie-title {
-	font-size: 22px/24px;
+	font-size: 28px/32px;
 }
 
 td {
