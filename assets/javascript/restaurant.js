@@ -1,23 +1,3 @@
-// function gps(){
-// var latitude = "";
-// var longitude = "";
-          
-//           if (navigator.geolocation) {
-//             navigator.geolocation.getCurrentPosition(function(position) {
-//               var pos = {
-//                 lat: position.coords.latitude,
-//                 lng: position.coords.longitude,
-				  
-//               };
-// 				longitude = position.coords.longitude;
-// 				latitude = position.coords.latitude;
-// 				console.log(latitude);
-// 				console.log(longitude);
-//           })
-//     locate();
-// };
-
-// }
 $( document ).ready(function(){
 
 	var zipCode = "";
@@ -25,6 +5,7 @@ $( document ).ready(function(){
 	function locate(zipCode){
 		var SearchTerm = $(this).attr("data-name");
 		var queryURL = "http://api.wunderground.com/api/79db6a03d8151c8c/geolookup/q/" + zipCode + ".json" ;
+		
 		//zip code to lat long ajax
 		$.ajax({
 			  url: queryURL,
@@ -32,11 +13,13 @@ $( document ).ready(function(){
 			})
 			.done(function(response) {
 				console.log(response);
+			
 				//lat long var definition
 				var latitude = response.location.lat;
 				var longitude = response.location.lon;
 				console.log(latitude);
 				console.log(longitude);
+			
 				//local restaurants ajax
 				$.ajax({
 						method: 'GET',
@@ -50,11 +33,13 @@ $( document ).ready(function(){
 					//response for loop
 					for (var k = 0; k<10; k++){
 						//main div
-						var rDiv = $("<div class='dynCard'>");	
+						var rDiv = $("<div class='dynCard'>");
+						
 						//restaurant name
 						var rName = response.restaurants[k].restaurant.name;
 						var pOne = $("<div>").html("<h2 class='wordBreak'>" + rName + "</h2>");
 						rDiv.append(pOne);
+						
 						//restaurant photo
 						var photo = response.restaurants[k].restaurant.thumb;
 						if (response.restaurants[k].restaurant.thumb == "") {
@@ -63,14 +48,17 @@ $( document ).ready(function(){
 							var image = $("<img class='rImage'>").attr("src", photo);
 							rDiv.append(image);
 							};
+						
 						//restaurant cuisine
 						var cuisine = response.restaurants[k].restaurant.cuisines;
 						var pTwo = $("<div class='wordBreak'>").html("<p>Cuisine: " + cuisine);
 						rDiv.append(pTwo);
+						
 						//restaurant address
 						var address = response.restaurants[k].restaurant.location.address;
 						var pThree = $("<p class='wordBreak' style='color:white;'>").text(address);
 						rDiv.append(pThree);
+						
 						//restraurant menu
 						var menu = response.restaurants[k].restaurant.menu_url;
 						var pF = $("<div>").append("<a target='_blank' href=" + menu + "><button class='btn inline-button'>" + "Get Menu" + "</button></a>");
@@ -92,3 +80,25 @@ $( document ).ready(function(){
 	});
 });
 
+
+//old code
+// function gps(){
+// var latitude = "";
+// var longitude = "";
+          
+//           if (navigator.geolocation) {
+//             navigator.geolocation.getCurrentPosition(function(position) {
+//               var pos = {
+//                 lat: position.coords.latitude,
+//                 lng: position.coords.longitude,
+				  
+//               };
+// 				longitude = position.coords.longitude;
+// 				latitude = position.coords.latitude;
+// 				console.log(latitude);
+// 				console.log(longitude);
+//           })
+//     locate();
+// };
+
+// }

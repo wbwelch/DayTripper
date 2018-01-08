@@ -3,6 +3,7 @@ $( document ).ready(function(){
 	function recipeSearch(foodtype){
 		var searchTerm = $(this).attr("data-name");
 		var queryURL = "https://api.edamam.com/search?q=" + foodtype + "&app_id=c13467eb&app_key=9cd5b15a4c49f23093c8fe1f1d2c7ce4"
+		
 		//recipe search ajax
 		$.ajax({
 			  url: queryURL,
@@ -13,6 +14,7 @@ $( document ).ready(function(){
 
 				//response loop
 				for (var k = 0; k<10; k++){
+					
 					//main div
 					var foodDiv = $("<div class = 'dynCard'>");
 
@@ -24,17 +26,21 @@ $( document ).ready(function(){
 					var recipeName = response.hits[k].recipe.label;
 					var pOne = $("<p>").html("<h2 class='wordBreak'>" + recipeName + "</h2>");
 					foodDiv.append(pOne);
+					
 					//recipe image
 					var recipePic = response.hits[k].recipe.image;
 					var pTwo = $("<img class='recipeImage'>").attr("src", recipePic);
 					foodDiv.append(pTwo);
+					
 					//full recipe link
 					var recipeURL = response.hits[k].recipe.shareAs;
 					var pThree =$("<p>").html("<a target='_blank' href='" + recipeURL + "'>" + "GET FULL RECIPE" + "</a>");
 					foodDiv.append(pThree);
+					
 					//ingredients
 					var length = response.hits[k].recipe.ingredients.length;
 					var ingList = $("<ul class='.browser-default'>");
+					
 					//ingredients loop
 					for (var i = 0; i < length; i++){
 
@@ -43,10 +49,12 @@ $( document ).ready(function(){
 						ingList.append(pFour);
 					};
 					foodDiv.append(ingList);
+					
 					//health labels
 					var health = response.hits[k].recipe.healthLabels;
 					var pFive = $("<p class='wordBreak'>").text(health);
 					foodDiv.append(pFive);
+					
 					//append main div
 					$("#recipeOutput").append(foodDiv);
 				}
@@ -58,6 +66,7 @@ $( document ).ready(function(){
 	function clear(){
 		$("#recipeOutput").empty();
 	}
+	
 	//on click, run function
 	$("#recipeSearch").on("click", function(event){
 	   var foodtype = $("#recipeInput").val().trim();

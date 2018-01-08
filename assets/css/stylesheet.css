@@ -149,10 +149,8 @@ input {
 	margin: 10px auto;
 }
 #youriframe {
-	padding: 2px;
-	margin: 10px auto;
-	width: 100%;
-	height: 100%;
+	width:640; 
+	height:390;
 }
 hr.spacer {
 	padding: 10px;
@@ -170,9 +168,10 @@ a {
 	margin: 5px 5px 5px 0;
 }
 .nav-menu-map {
-	padding:20px;
-	margin:20px;
+	padding:15px;
+	margin:15px;
 	font-size:28px/32px;
+	width: 7em;
 }
 .main-div {
 	position: relative;

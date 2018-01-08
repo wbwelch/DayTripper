@@ -9,7 +9,7 @@ $( document ).ready(function(){
 	function showStreamSearch() {
 
 		var queryURL = "http://api-public.guidebox.com/v2/search?api_key=1c94ca8b2662e97be6c424070e65bb62ea577bf4&type=" + showType + "&field=title&query=" + showSearchInput;
-		//Show ID ajax
+		//Show or movie ID# ajax
 		  $.ajax({
 			url: queryURL,
 			method: "GET"
@@ -19,14 +19,13 @@ $( document ).ready(function(){
 			  if (response.results.length == 0) {
 							$("#showOutput").append("<h2>Please check show or movie spelling and button selection.</h2>");
 						};
-			  //response loop
+			  //response loop to grab movie id
 			  for (var i = 0; i < 1 ; i++) {
 				movieID = response.results[0].id;
-				  console.log(movieID);
 			  };
 
 				var streamQueryURL = "http://api-public.guidebox.com/v2/" + streamShowType + "/" + movieID + "?api_key=1c94ca8b2662e97be6c424070e65bb62ea577bf4&limit=10";
-				//stream ajax
+				//stream search ajax
 					$.ajax({
 						url: streamQueryURL,
 						method: "GET"
@@ -43,12 +42,15 @@ $( document ).ready(function(){
 						var purchaseTV = newResponse.tv_com;
 						//main div
 						var streamDiv = $("<div class = 'dynCard full'>");
+						
 						//movie or show name
 						var pOne = $("<div>").html("<h2 class='wordBreak movie-title'>" + showTitle + "</h2>");
+						
 						streamDiv.append(pOne);
 						//movie or show rating
 						var pTwo = $("<p style='color:white' class='wordBreak'>").html("<strong>" + "Rated: " + rating + "</strong>");
 						streamDiv.append(pTwo);
+						
 						//movie and show image conditional
 						if (streamShowType == 'movies') {
 							var pThree = $("<img>").attr("src", movieImage);
@@ -59,10 +61,12 @@ $( document ).ready(function(){
 							pThree.attr("alt", showSearchInput + " poster")
 							streamDiv.append(pThree);
 						}
+						
 						//movie or show overview
 						var pFour = $("<p class='wordBreak'>").html("<em style='color:white;'>" + overview + "</em>");
 						streamDiv.append(pFour);
-						//if free movie stream source exists buttons
+						
+						//TV and movie conditional: if free movie stream source exists, add buttons
 						if (streamShowType == 'movies') {
 							if (newResponse.free_web_sources.length > 0) {
 							streamDiv.append("<h2>Free Stream Sources:</h2>")
@@ -77,7 +81,7 @@ $( document ).ready(function(){
 								streamDiv.append(pFive);
 							};
 						} 
-						//else tv stream source buttons
+						//else tv stream source, add buttons
 						else {
 							if (newResponse.channels[0].live_stream.web.length > 0) {
 							streamDiv.append("<h2>Where to Watch:</h2>")
@@ -93,7 +97,7 @@ $( document ).ready(function(){
 									};
 							};
 						};
-						//movie purchase to stream option buttons
+						//TV and movie conditional: movie purchase to stream, add buttons
 						if (streamShowType == 'movies') {
 							streamDiv.append("<h2>Where to Buy:</h2>");
 							for (var k = 0; k < newResponse.purchase_web_sources.length; k++) {
@@ -103,7 +107,7 @@ $( document ).ready(function(){
 								streamDiv.append(pSix);
 								}	
 							} 
-						//tv show more info buttons
+						//tv show tv.com, add more info button
 						else {
 							streamDiv.append("<h2>More Info:</h2>")	
 							var pSix = $("<div>").html("<a target='_blank' href='" + purchaseTV + "'><button class='btn' style='margin-right: 20px; margin-left: 15px'>tv.com</button></a>");
@@ -128,17 +132,20 @@ $( document ).ready(function(){
 	};
 	//on click, run function		  
 	$("#movieSearch").on("click", function(event){
-		console.log("test");
 		event.preventDefault();
 		$("#showOutput").empty();
 		showSearchInput = $("#showSearch").val().trim();
 		searchType();
 		showStreamSearch();
 	});
-	//enter key to search
-	$("#showSearch").keyup(function(event) {
-		if (event.keyCode === 13) {
-			$("#movieSearch").click();
-		}
-	});
+	//enter key to search - not needed
+//	$("#showSearch").on("keyup", function(event) {
+//		if (event.keyCode === 13) {
+//			$("#showOutput").empty();
+//			showSearchInput = $("#showSearch").val().trim();
+//			searchType();
+//			showStreamSearch();
+//		}
+//	});
+
 });

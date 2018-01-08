@@ -1,4 +1,3 @@
-
 function go_get(){
  var base_url = 'http://www.youtube.com/embed?listType=search&list=';
  var search_field = document.getElementById('yourtextfield').value;
@@ -6,5 +5,4 @@ function go_get(){
  var ifr = document.getElementById('youriframe');
  ifr.src = target_url;
  return false;
-}
-
+};

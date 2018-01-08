@@ -1,6 +1,7 @@
 // JavaScript Document
 $( document ).ready(function(){
-
+	
+	//moment variables
 	var year = moment().year();
 	var month = moment().month();
 	var date = moment().date();
@@ -15,6 +16,7 @@ $( document ).ready(function(){
 			$.ajax({
 				url: queryURL,
 				method: "GET",
+				
 				//error message
 				complete: function(e){
 					 if (e.status === 400) {
