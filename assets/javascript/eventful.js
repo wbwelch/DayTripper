@@ -36,7 +36,7 @@ console.log(monthName);
 
 function eventfulInfo(){
 	var SearchTerm = $(this).attr("data-name");
-	var queryURL = "http://api.eventful.com/json/events/search?&q=comedy&l=" + zipCode + "&within=10&units=miles&t=" + formattedDate + "&app_key=xknQ6SvQTNHGgt7Q";
+	var queryURL = "http://api.eventful.com/rest/events/search?&q=music&l=" + zipCode + "&within=10&units=miles&t=" + formattedDate + "&app_key=xknQ6SvQTNHGgt7Q";
 
 		$.ajax({
         	method: "GET",
@@ -44,15 +44,16 @@ function eventfulInfo(){
 
         	   }).done(function(response) {
 		  		console.log(response);
-				//console.log(response.events[0].event[0]);
-
+				
+				var events = response.getElementsByTagName("events");
+				console.log(events);
 
 		  		for (var i = 0; i < 9; i++) {
-					console.log(response[i].events);
 					//for (var k = 0; k < 9; k++) {
 						var eventfulDiv= $("<div class = 'dynCard'>");
 
-						//var eventName = response.events.event[k].title;
+						var eventName = events[0].getElementsByTagName("title");
+						console.log(eventName[i]);
 	//					var p1= $("<h2 class='wordBreak'>").text(eventName);
 	//					eventfulDiv.append(p1);
 	//	
