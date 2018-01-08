@@ -24,13 +24,11 @@ function eventInfo(zipCode){
 
 		  			var date = response.results[i].activityStartDate;					
 					var myJSON = JSON.stringify(date);
-					console.log(date);
 		  			var p2 = $("<p style='font-style:italic; margin: 0 0 -20px 0;' class='wordBreak'>").text("Start Date: " +  myJSON.substr(1,10));
 		  			eventDiv.append(p2);
 					
 					var endDate = response.results[i].activityEndDate;					
 					var myJSONEnd = JSON.stringify(endDate);
-					console.log(date);
 		  			var p6 = $("<p style='font-style:italic' class='wordBreak'>").text("End Date: " +  myJSONEnd.substr(1,10));
 		  			eventDiv.append(p6);
 

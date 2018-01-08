@@ -28,10 +28,6 @@ var config = {
         activity = $("#activity-input").val().trim();
         review = $("#review-input").val().trim();
 
-        console.log(date);
-        console.log(name);
-        console.log(activity);
-        console.log(review);
 
         database.ref().push({
             date: date,
@@ -57,13 +53,6 @@ var config = {
             var firebaseActivity = childSnapshot.val().activity;
             var firebaseReview = childSnapshot.val().review;
 
-                console.log("---------------")
-                console.log(firebaseDate);
-                console.log(firebaseName);
-                console.log(firebaseActivity);
-                console.log(firebaseReview);
-                console.log("---------------")
-				console.log(userZip);
 
             //Append the new items to the table
             $("#new-review").append("<tr><td>" + firebaseDate + 
