@@ -23,11 +23,6 @@ $( document ).ready(function(){
 						var p1 = $("<h2 style='margin: 0 0 -20px 0;' class='wordBreak'>").html(event + "<hr>");
 						eventDiv.append(p1);
 						
-						//event market type
-						var market = response.results[i].market.marketName;
-						var p5 = $("<h2 class='wordBreak actType'>").html("Activity Type: " + market);
-						eventDiv.append(p5);
-						
 						//event start date
 						var date = response.results[i].activityStartDate;					
 						var myJSON = JSON.stringify(date);

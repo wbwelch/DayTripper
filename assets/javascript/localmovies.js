@@ -48,7 +48,7 @@ $( document ).ready(function(){
 					nowPlayingDiv.append(pTwo);
 					
 					//runtime div
-					var pThree = $("<h2 class='wordBreak'>").html(runtime[2,3] + " hour(s) " + runtime[5,6] + " min.");
+					var pThree = $("<h2 class='wordBreak'>").html(runtime[2,3] + " hour(s) " + runtime[5] + runtime[6] + " min.");
 					nowPlayingDiv.append(pThree);
 					
 					//rating div
